@@ -1,0 +1,719 @@
+2016-08-24 20:12:52 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /home/advanced/vendor/yiisoft/yii2/db/Connection.php:603
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 /home/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /home/advanced/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /home/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/advanced/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /home/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /home/advanced/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /home/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /home/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /home/advanced/vendor/yiisoft/yii2/db/Connection.php:550
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#1 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 /home/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#4 /home/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/advanced/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /home/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /home/advanced/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#15 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /home/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /home/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-08-24 20:12:52 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '1'
+    'XDG_SESSION_ID' => '1'
+    'HOSTNAME' => 'qkrcblf0002'
+    'TERMINATOR_UUID' => 'urn:uuid:2d60d604-0a3f-4365-8265-d59039ba80b1'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '17514'
+    'GPG_AGENT_INFO' => '/run/user/1256201252/keyring/gpg:0:1'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'HISTSIZE' => '1000'
+    'GJS_DEBUG_OUTPUT' => 'stderr'
+    'WINDOWID' => '39845892'
+    'OLDPWD' => '/home/advanced/common'
+    'QTDIR' => '/usr/lib64/qt-3.3'
+    'QTINC' => '/usr/lib64/qt-3.3/include'
+    'GJS_DEBUG_TOPICS' => 'JS ERROR;JS LOG'
+    'QT_GRAPHICSSYSTEM_CHECKED' => '1'
+    'USER' => 'Q\\allam.levi'
+    'LS_COLORS' => 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:'
+    'SSH_AUTH_SOCK' => '/run/user/1256201252/keyring/ssh'
+    'USERNAME' => 'Q\\allam.levi'
+    'SESSION_MANAGER' => 'local/unix:@/tmp/.ICE-unix/1993,unix/unix:/tmp/.ICE-unix/1993'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/usr/share/applications/terminator.desktop'
+    'PATH' => '/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/smartgit/bin/:/home/allam.levi/.local/bin:/home/allam.levi/bin:/opt/smartgit/bin/:/usr/local/bin/'
+    'MAIL' => '/var/spool/mail/Q\\allam.levi'
+    'DESKTOP_SESSION' => 'gnome'
+    'QT_IM_MODULE' => 'ibus'
+    'PWD' => '/home/advanced'
+    'XMODIFIERS' => '@im=ibus'
+    'LANG' => 'en_IN.UTF-8'
+    'MODULEPATH' => '/etc/scl/modulefiles:/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles'
+    'GDM_LANG' => 'en_IN.UTF-8'
+    'LOADEDMODULES' => ''
+    'GDMSESSION' => 'gnome'
+    'SSH_ASKPASS' => '/usr/libexec/openssh/gnome-ssh-askpass'
+    'HISTCONTROL' => 'ignoredups'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/allam.levi'
+    'SHLVL' => '2'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'XDG_SESSION_DESKTOP' => 'gnome'
+    'LOGNAME' => 'Q\\allam.levi'
+    'QTLIB' => '/usr/lib64/qt-3.3/lib'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-zKMLXEm3Hy,guid=b83546aa82301a7bfc8e9f8d57bd565b'
+    'MODULESHOME' => '/usr/share/Modules'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'WINDOWPATH' => '1'
+    'DISPLAY' => ':0'
+    'XDG_RUNTIME_DIR' => '/run/user/1256201252'
+    'XDG_CURRENT_DESKTOP' => 'GNOME'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/run/gdm/auth-for-Q\\allam.levi-RvBJno/database'
+    'BASH_FUNC_module()' => '() {  eval `/usr/bin/modulecmd bash $*`
+}'
+    'BASH_FUNC_scl()' => '() {  local CMD=$1;
+ if [ \"$CMD\" = \"load\" -o \"$CMD\" = \"unload\" ]; then
+ eval \"module $@\";
+ else
+ /usr/bin/scl \"$@\";
+ fi
+}'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1472069572.864
+    'REQUEST_TIME' => 1472069572
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-08-24 20:12:57 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /home/advanced/vendor/yiisoft/yii2/db/Connection.php:603
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 /home/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /home/advanced/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /home/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/advanced/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /home/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /home/advanced/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /home/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /home/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /home/advanced/vendor/yiisoft/yii2/db/Connection.php:550
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#1 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 /home/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#4 /home/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/advanced/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /home/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /home/advanced/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#15 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /home/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /home/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-08-24 20:12:57 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '1'
+    'XDG_SESSION_ID' => '1'
+    'HOSTNAME' => 'qkrcblf0002'
+    'TERMINATOR_UUID' => 'urn:uuid:2d60d604-0a3f-4365-8265-d59039ba80b1'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '17514'
+    'GPG_AGENT_INFO' => '/run/user/1256201252/keyring/gpg:0:1'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'HISTSIZE' => '1000'
+    'GJS_DEBUG_OUTPUT' => 'stderr'
+    'WINDOWID' => '39845892'
+    'OLDPWD' => '/home/advanced/common'
+    'QTDIR' => '/usr/lib64/qt-3.3'
+    'QTINC' => '/usr/lib64/qt-3.3/include'
+    'GJS_DEBUG_TOPICS' => 'JS ERROR;JS LOG'
+    'QT_GRAPHICSSYSTEM_CHECKED' => '1'
+    'USER' => 'Q\\allam.levi'
+    'LS_COLORS' => 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:'
+    'SSH_AUTH_SOCK' => '/run/user/1256201252/keyring/ssh'
+    'USERNAME' => 'Q\\allam.levi'
+    'SESSION_MANAGER' => 'local/unix:@/tmp/.ICE-unix/1993,unix/unix:/tmp/.ICE-unix/1993'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/usr/share/applications/terminator.desktop'
+    'PATH' => '/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/smartgit/bin/:/home/allam.levi/.local/bin:/home/allam.levi/bin:/opt/smartgit/bin/:/usr/local/bin/'
+    'MAIL' => '/var/spool/mail/Q\\allam.levi'
+    'DESKTOP_SESSION' => 'gnome'
+    'QT_IM_MODULE' => 'ibus'
+    'PWD' => '/home/advanced'
+    'XMODIFIERS' => '@im=ibus'
+    'LANG' => 'en_IN.UTF-8'
+    'MODULEPATH' => '/etc/scl/modulefiles:/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles'
+    'GDM_LANG' => 'en_IN.UTF-8'
+    'LOADEDMODULES' => ''
+    'GDMSESSION' => 'gnome'
+    'SSH_ASKPASS' => '/usr/libexec/openssh/gnome-ssh-askpass'
+    'HISTCONTROL' => 'ignoredups'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/allam.levi'
+    'SHLVL' => '2'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'XDG_SESSION_DESKTOP' => 'gnome'
+    'LOGNAME' => 'Q\\allam.levi'
+    'QTLIB' => '/usr/lib64/qt-3.3/lib'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-zKMLXEm3Hy,guid=b83546aa82301a7bfc8e9f8d57bd565b'
+    'MODULESHOME' => '/usr/share/Modules'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'WINDOWPATH' => '1'
+    'DISPLAY' => ':0'
+    'XDG_RUNTIME_DIR' => '/run/user/1256201252'
+    'XDG_CURRENT_DESKTOP' => 'GNOME'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/run/gdm/auth-for-Q\\allam.levi-RvBJno/database'
+    'BASH_FUNC_module()' => '() {  eval `/usr/bin/modulecmd bash $*`
+}'
+    'BASH_FUNC_scl()' => '() {  local CMD=$1;
+ if [ \"$CMD\" = \"load\" -o \"$CMD\" = \"unload\" ]; then
+ eval \"module $@\";
+ else
+ /usr/bin/scl \"$@\";
+ fi
+}'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1472069577.3119
+    'REQUEST_TIME' => 1472069577
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-08-24 20:13:52 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /home/advanced/vendor/yiisoft/yii2/db/Connection.php:603
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 /home/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /home/advanced/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /home/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/advanced/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /home/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /home/advanced/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /home/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /home/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /home/advanced/vendor/yiisoft/yii2/db/Connection.php:550
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#1 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 /home/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#4 /home/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/advanced/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /home/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /home/advanced/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#15 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /home/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /home/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-08-24 20:13:52 [-][-][-][info][application] $_SERVER = [
+    'HOSTNAME' => 'qkrcblf0002'
+    'TERM' => 'xterm-256color'
+    'HISTSIZE' => '1000'
+    'QTDIR' => '/usr/lib64/qt-3.3'
+    'LS_COLORS' => 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:'
+    'USERNAME' => 'Q\\allam.levi'
+    'MAIL' => '/var/spool/mail/Q\\allam.levi'
+    'LANG' => 'en_IN.UTF-8'
+    'DISPLAY' => ':0'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/run/gdm/auth-for-Q\\allam.levi-RvBJno/database'
+    'SHELL' => '/bin/bash'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LOGNAME' => 'root'
+    'USER' => 'root'
+    'HOME' => '/root'
+    'SUDO_COMMAND' => './yii migrate'
+    'SUDO_USER' => 'Q\\allam.levi'
+    'SUDO_UID' => '1256201252'
+    'SUDO_GID' => '1256194561'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1472069632.3366
+    'REQUEST_TIME' => 1472069632
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-08-24 20:16:28 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /home/advanced/vendor/yiisoft/yii2/db/Connection.php:603
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 /home/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /home/advanced/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /home/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/advanced/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /home/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /home/advanced/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /home/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /home/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /home/advanced/vendor/yiisoft/yii2/db/Connection.php:550
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#1 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 /home/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#4 /home/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/advanced/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /home/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /home/advanced/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#15 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /home/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /home/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-08-24 20:16:28 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '1'
+    'XDG_SESSION_ID' => '1'
+    'HOSTNAME' => 'qkrcblf0002'
+    'TERMINATOR_UUID' => 'urn:uuid:2d60d604-0a3f-4365-8265-d59039ba80b1'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '17514'
+    'GPG_AGENT_INFO' => '/run/user/1256201252/keyring/gpg:0:1'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'HISTSIZE' => '1000'
+    'GJS_DEBUG_OUTPUT' => 'stderr'
+    'WINDOWID' => '39845892'
+    'OLDPWD' => '/home/advanced/common'
+    'QTDIR' => '/usr/lib64/qt-3.3'
+    'QTINC' => '/usr/lib64/qt-3.3/include'
+    'GJS_DEBUG_TOPICS' => 'JS ERROR;JS LOG'
+    'QT_GRAPHICSSYSTEM_CHECKED' => '1'
+    'USER' => 'Q\\allam.levi'
+    'LS_COLORS' => 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:'
+    'SSH_AUTH_SOCK' => '/run/user/1256201252/keyring/ssh'
+    'USERNAME' => 'Q\\allam.levi'
+    'SESSION_MANAGER' => 'local/unix:@/tmp/.ICE-unix/1993,unix/unix:/tmp/.ICE-unix/1993'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/usr/share/applications/terminator.desktop'
+    'PATH' => '/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/smartgit/bin/:/home/allam.levi/.local/bin:/home/allam.levi/bin:/opt/smartgit/bin/:/usr/local/bin/'
+    'MAIL' => '/var/spool/mail/Q\\allam.levi'
+    'DESKTOP_SESSION' => 'gnome'
+    'QT_IM_MODULE' => 'ibus'
+    'PWD' => '/home/advanced'
+    'XMODIFIERS' => '@im=ibus'
+    'LANG' => 'en_IN.UTF-8'
+    'MODULEPATH' => '/etc/scl/modulefiles:/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles'
+    'GDM_LANG' => 'en_IN.UTF-8'
+    'LOADEDMODULES' => ''
+    'GDMSESSION' => 'gnome'
+    'SSH_ASKPASS' => '/usr/libexec/openssh/gnome-ssh-askpass'
+    'HISTCONTROL' => 'ignoredups'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/allam.levi'
+    'SHLVL' => '2'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'XDG_SESSION_DESKTOP' => 'gnome'
+    'LOGNAME' => 'Q\\allam.levi'
+    'QTLIB' => '/usr/lib64/qt-3.3/lib'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-zKMLXEm3Hy,guid=b83546aa82301a7bfc8e9f8d57bd565b'
+    'MODULESHOME' => '/usr/share/Modules'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'WINDOWPATH' => '1'
+    'DISPLAY' => ':0'
+    'XDG_RUNTIME_DIR' => '/run/user/1256201252'
+    'XDG_CURRENT_DESKTOP' => 'GNOME'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/run/gdm/auth-for-Q\\allam.levi-RvBJno/database'
+    'BASH_FUNC_module()' => '() {  eval `/usr/bin/modulecmd bash $*`
+}'
+    'BASH_FUNC_scl()' => '() {  local CMD=$1;
+ if [ \"$CMD\" = \"load\" -o \"$CMD\" = \"unload\" ]; then
+ eval \"module $@\";
+ else
+ /usr/bin/scl \"$@\";
+ fi
+}'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1472069788.514
+    'REQUEST_TIME' => 1472069788
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-08-24 20:18:43 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /home/advanced/vendor/yiisoft/yii2/db/Connection.php:603
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(603): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 /home/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /home/advanced/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /home/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/advanced/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /home/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /home/advanced/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /home/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /home/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /home/advanced/vendor/yiisoft/yii2/db/Connection.php:550
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#1 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 /home/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#4 /home/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/advanced/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /home/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /home/advanced/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#15 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /home/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /home/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-08-24 20:18:43 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '1'
+    'XDG_SESSION_ID' => '1'
+    'HOSTNAME' => 'qkrcblf0002'
+    'TERMINATOR_UUID' => 'urn:uuid:0ecf6f3f-a019-4e2d-9c15-d27c290e20f3'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '17514'
+    'GPG_AGENT_INFO' => '/run/user/1256201252/keyring/gpg:0:1'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'HISTSIZE' => '1000'
+    'GJS_DEBUG_OUTPUT' => 'stderr'
+    'WINDOWID' => '39845892'
+    'QTDIR' => '/usr/lib64/qt-3.3'
+    'QTINC' => '/usr/lib64/qt-3.3/include'
+    'GJS_DEBUG_TOPICS' => 'JS ERROR;JS LOG'
+    'QT_GRAPHICSSYSTEM_CHECKED' => '1'
+    'USER' => 'Q\\allam.levi'
+    'LS_COLORS' => 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:'
+    'SSH_AUTH_SOCK' => '/run/user/1256201252/keyring/ssh'
+    'USERNAME' => 'Q\\allam.levi'
+    'SESSION_MANAGER' => 'local/unix:@/tmp/.ICE-unix/1993,unix/unix:/tmp/.ICE-unix/1993'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/usr/share/applications/terminator.desktop'
+    'PATH' => '/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/smartgit/bin/:/home/allam.levi/.local/bin:/home/allam.levi/bin:/opt/smartgit/bin/:/usr/local/bin/:/usr/local/php/bin/'
+    'MAIL' => '/var/spool/mail/Q\\allam.levi'
+    'DESKTOP_SESSION' => 'gnome'
+    'QT_IM_MODULE' => 'ibus'
+    'PWD' => '/home/advanced'
+    'XMODIFIERS' => '@im=ibus'
+    'LANG' => 'en_IN.UTF-8'
+    'MODULEPATH' => '/etc/scl/modulefiles:/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles'
+    'GDM_LANG' => 'en_IN.UTF-8'
+    'LOADEDMODULES' => ''
+    'GDMSESSION' => 'gnome'
+    'SSH_ASKPASS' => '/usr/libexec/openssh/gnome-ssh-askpass'
+    'HISTCONTROL' => 'ignoredups'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/allam.levi'
+    'SHLVL' => '2'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'XDG_SESSION_DESKTOP' => 'gnome'
+    'LOGNAME' => 'Q\\allam.levi'
+    'QTLIB' => '/usr/lib64/qt-3.3/lib'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-zKMLXEm3Hy,guid=b83546aa82301a7bfc8e9f8d57bd565b'
+    'MODULESHOME' => '/usr/share/Modules'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'WINDOWPATH' => '1'
+    'DISPLAY' => ':0'
+    'XDG_RUNTIME_DIR' => '/run/user/1256201252'
+    'XDG_CURRENT_DESKTOP' => 'GNOME'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/run/gdm/auth-for-Q\\allam.levi-RvBJno/database'
+    'BASH_FUNC_module()' => '() {  eval `/usr/bin/modulecmd bash $*`
+}'
+    'BASH_FUNC_scl()' => '() {  local CMD=$1;
+ if [ \"$CMD\" = \"load\" -o \"$CMD\" = \"unload\" ]; then
+ eval \"module $@\";
+ else
+ /usr/bin/scl \"$@\";
+ fi
+}'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1472069923.1479
+    'REQUEST_TIME' => 1472069923
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2016-08-24 20:21:28 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'could not find driver' in /home/advanced/vendor/yiisoft/yii2/db/Connection.php:603
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(603): PDO->__construct('mysql:host=127....', 'root', 'root', NULL)
+#1 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 /home/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#5 /home/advanced/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#6 /home/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /home/advanced/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 /home/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#11 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#12 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#13 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#14 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /home/advanced/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#19 /home/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#20 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#21 /home/advanced/yii(27): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'could not find driver' in /home/advanced/vendor/yiisoft/yii2/db/Connection.php:550
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(864): yii\db\Connection->open()
+#1 /home/advanced/vendor/yiisoft/yii2/db/Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 /home/advanced/vendor/yiisoft/yii2/db/Command.php(219): yii\db\Connection->getSlavePdo()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Command.php(894): yii\db\Command->prepare(true)
+#4 /home/advanced/vendor/yiisoft/yii2/db/Command.php(362): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /home/advanced/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /home/advanced/vendor/yiisoft/yii2/db/Schema.php(149): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 /home/advanced/vendor/yiisoft/yii2/console/controllers/MigrateController.php(178): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#9 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(627): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#10 /home/advanced/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(102): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#11 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#12 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#13 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#14 /home/advanced/vendor/yiisoft/yii2/console/Controller.php(119): yii\base\Controller->runAction('', Array)
+#15 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\console\Controller->runAction('', Array)
+#16 /home/advanced/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#19 /home/advanced/yii(27): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-08-24 20:21:28 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '1'
+    'XDG_SESSION_ID' => '1'
+    'HOSTNAME' => 'qkrcblf0002'
+    'TERMINATOR_UUID' => 'urn:uuid:0ecf6f3f-a019-4e2d-9c15-d27c290e20f3'
+    'GIO_LAUNCHED_DESKTOP_FILE_PID' => '17514'
+    'GPG_AGENT_INFO' => '/run/user/1256201252/keyring/gpg:0:1'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'HISTSIZE' => '1000'
+    'GJS_DEBUG_OUTPUT' => 'stderr'
+    'WINDOWID' => '39845892'
+    'QTDIR' => '/usr/lib64/qt-3.3'
+    'QTINC' => '/usr/lib64/qt-3.3/include'
+    'GJS_DEBUG_TOPICS' => 'JS ERROR;JS LOG'
+    'QT_GRAPHICSSYSTEM_CHECKED' => '1'
+    'USER' => 'Q\\allam.levi'
+    'LS_COLORS' => 'rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:'
+    'SSH_AUTH_SOCK' => '/run/user/1256201252/keyring/ssh'
+    'USERNAME' => 'Q\\allam.levi'
+    'SESSION_MANAGER' => 'local/unix:@/tmp/.ICE-unix/1993,unix/unix:/tmp/.ICE-unix/1993'
+    'GIO_LAUNCHED_DESKTOP_FILE' => '/usr/share/applications/terminator.desktop'
+    'PATH' => '/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/smartgit/bin/:/home/allam.levi/.local/bin:/home/allam.levi/bin:/opt/smartgit/bin/:/usr/local/bin/:/usr/local/php/bin/'
+    'MAIL' => '/var/spool/mail/Q\\allam.levi'
+    'DESKTOP_SESSION' => 'gnome'
+    'QT_IM_MODULE' => 'ibus'
+    'PWD' => '/home/advanced'
+    'XMODIFIERS' => '@im=ibus'
+    'LANG' => 'en_IN.UTF-8'
+    'MODULEPATH' => '/etc/scl/modulefiles:/etc/scl/modulefiles:/usr/share/Modules/modulefiles:/etc/modulefiles:/usr/share/modulefiles'
+    'GDM_LANG' => 'en_IN.UTF-8'
+    'LOADEDMODULES' => ''
+    'GDMSESSION' => 'gnome'
+    'SSH_ASKPASS' => '/usr/libexec/openssh/gnome-ssh-askpass'
+    'HISTCONTROL' => 'ignoredups'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/allam.levi'
+    'SHLVL' => '2'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'XDG_SESSION_DESKTOP' => 'gnome'
+    'LOGNAME' => 'Q\\allam.levi'
+    'QTLIB' => '/usr/lib64/qt-3.3/lib'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-zKMLXEm3Hy,guid=b83546aa82301a7bfc8e9f8d57bd565b'
+    'MODULESHOME' => '/usr/share/Modules'
+    'LESSOPEN' => '||/usr/bin/lesspipe.sh %s'
+    'WINDOWPATH' => '1'
+    'DISPLAY' => ':0'
+    'XDG_RUNTIME_DIR' => '/run/user/1256201252'
+    'XDG_CURRENT_DESKTOP' => 'GNOME'
+    'COLORTERM' => 'gnome-terminal'
+    'XAUTHORITY' => '/run/gdm/auth-for-Q\\allam.levi-RvBJno/database'
+    'BASH_FUNC_module()' => '() {  eval `/usr/bin/modulecmd bash $*`
+}'
+    'BASH_FUNC_scl()' => '() {  local CMD=$1;
+ if [ \"$CMD\" = \"load\" -o \"$CMD\" = \"unload\" ]; then
+ eval \"module $@\";
+ else
+ /usr/bin/scl \"$@\";
+ fi
+}'
+    '_' => './yii'
+    'OLDPWD' => '/home/advanced/common/config'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1472070088.8152
+    'REQUEST_TIME' => 1472070088
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]

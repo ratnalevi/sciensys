@@ -1,0 +1,54 @@
+Message-ID: <5981b826c07d1721a7eeff0334c31a9f@frontend.sciensys.dev>
+Date: Tue, 30 Aug 2016 01:14:30 +0530
+Subject: Password reset for Sciensys
+From: Sciensys robot <support@example.com>
+To: ratnalevi@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1472499870_fa1f01f3c437a1508cfd81ec92f7f81b_=_"
+
+
+--_=_swift_v4_1472499870_fa1f01f3c437a1508cfd81ec92f7f81b_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello ratnalevi,
+
+Follow the link below to reset your password:
+
+ht=
+tp://frontend.sciensys.dev/index.php?r=3Dsite%2Freset-password&token=3D9zdL=
+N9cKc17NRxyV78oLhu-EXM_QWUqx_1472499870
+
+--_=_swift_v4_1472499870_fa1f01f3c437a1508cfd81ec92f7f81b_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/=
+xhtml">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/ht=
+ml; charset=3DUTF-8" />
+    <title></title>
+    </head>
+<body>
+    =
+    <div class=3D"password-reset">
+    <p>Hello ratnalevi,</p>
+
+    <=
+p>Follow the link below to reset your password:</p>
+
+    <p><a href=3D"=
+http://frontend.sciensys.dev/index.php?r=3Dsite%2Freset-password&amp;token=
+=3D9zdLN9cKc17NRxyV78oLhu-EXM_QWUqx_1472499870">http://frontend.sciensys.de=
+v/index.php?r=3Dsite%2Freset-password&amp;token=3D9zdLN9cKc17NRxyV78oLhu-EX=
+M_QWUqx_1472499870</a></p>
+</div>
+    </body>
+</html>
+
+
+--_=_swift_v4_1472499870_fa1f01f3c437a1508cfd81ec92f7f81b_=_--
