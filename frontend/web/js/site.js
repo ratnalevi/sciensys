@@ -1,4 +1,5 @@
 
+console.log('Levi');
 var latestNotificationTime = 0;
 var notificationInterval = 15000;
 
