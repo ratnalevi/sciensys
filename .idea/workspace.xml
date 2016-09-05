@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0c9f55b9-b193-4f46-aa7a-05b1299d98b6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/js/site.js" afterPath="$PROJECT_DIR$/frontend/web/js/site.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/.gitignore" afterPath="$PROJECT_DIR$/frontend/web/.gitignore" />
     </list>
     <ignored path="advanced.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +45,8 @@
       <file leaf-file-name="site.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/frontend/web/js/site.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="2040">
+              <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -179,8 +179,8 @@
         <option value="$PROJECT_DIR$/frontend/views/business-detail/view.php" />
         <option value="$PROJECT_DIR$/frontend/models/DocumentDetailSearch.php" />
         <option value="$PROJECT_DIR$/frontend/views/document-detail/index.php" />
-        <option value="$PROJECT_DIR$/frontend/web/.gitignore" />
         <option value="$PROJECT_DIR$/frontend/web/js/site.js" />
+        <option value="$PROJECT_DIR$/frontend/web/.gitignore" />
       </list>
     </option>
   </component>
@@ -411,12 +411,12 @@
       <workItem from="1472381504762" duration="24690000" />
       <workItem from="1472899368945" duration="27812000" />
       <workItem from="1473063024539" duration="651000" />
-      <workItem from="1473064068424" duration="2394000" />
+      <workItem from="1473064068424" duration="1392000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90214000" />
+    <option name="totallyTimeSpent" value="89212000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
@@ -834,8 +834,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/web/js/site.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="2040">
+          <caret line="136" column="28" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
           <folding />
         </state>
       </provider>
