@@ -388,3 +388,1993 @@ $_SERVER = [
     ]
     'argc' => 1
 ]
+2016-09-04 00:56:44 [127.0.0.1][-][fb523d664555d30d609bdae37dbddb3f][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Required' in /home/advanced/vendor/yiisoft/yii2/web/User.php:435
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(149): yii\web\User->loginRequired()
+#1 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /home/advanced/vendor/yiisoft/yii2/base/ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /home/advanced/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /home/advanced/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#9 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('', Array)
+#10 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#12 {main}
+2016-09-04 00:56:44 [127.0.0.1][-][fb523d664555d30d609bdae37dbddb3f][info][application] $_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/css/other.css'
+    'REDIRECT_SCRIPT_URI' => 'http://admin.sciensys.dev/css/other.css'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/css/other.css'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/css/other.css'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53284'
+    'REDIRECT_URL' => '/css/other.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/css/other.css'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472930804.65
+    'REQUEST_TIME' => 1472930804
+    'argv' => []
+    'argc' => 0
+]
+2016-09-04 00:56:45 [127.0.0.1][-][c1a8cddda338f7398c4d3a935c941f9d][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Required' in /home/advanced/vendor/yiisoft/yii2/web/User.php:435
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(149): yii\web\User->loginRequired()
+#1 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /home/advanced/vendor/yiisoft/yii2/base/ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /home/advanced/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /home/advanced/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#9 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('', Array)
+#10 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#12 {main}
+2016-09-04 00:56:45 [127.0.0.1][-][c1a8cddda338f7398c4d3a935c941f9d][info][application] $_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_no-gzip' => '1'
+    'REDIRECT_dont-vary' => '1'
+    'REDIRECT_SCRIPT_URL' => '/images/background.jpg'
+    'REDIRECT_SCRIPT_URI' => 'http://admin.sciensys.dev/images/background.jpg'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/images/background.jpg'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/images/background.jpg'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53284'
+    'REDIRECT_URL' => '/images/background.jpg'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/images/background.jpg'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472930805.06
+    'REQUEST_TIME' => 1472930805
+    'argv' => []
+    'argc' => 0
+]
+2016-09-04 00:56:50 [127.0.0.1][-][534dbb939aa6c6f42f950f39131ddc7f][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Required' in /home/advanced/vendor/yiisoft/yii2/web/User.php:435
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(149): yii\web\User->loginRequired()
+#1 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /home/advanced/vendor/yiisoft/yii2/base/ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /home/advanced/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /home/advanced/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#9 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('', Array)
+#10 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#12 {main}
+2016-09-04 00:56:50 [127.0.0.1][-][534dbb939aa6c6f42f950f39131ddc7f][info][application] $_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/css/other.css'
+    'REDIRECT_SCRIPT_URI' => 'http://admin.sciensys.dev/css/other.css'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/css/other.css'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/css/other.css'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53293'
+    'REDIRECT_URL' => '/css/other.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/css/other.css'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472930810.52
+    'REQUEST_TIME' => 1472930810
+    'argv' => []
+    'argc' => 0
+]
+2016-09-04 00:56:50 [127.0.0.1][-][33a4b6568409ccdb20fcc8f675d4d3d4][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Required' in /home/advanced/vendor/yiisoft/yii2/web/User.php:435
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(149): yii\web\User->loginRequired()
+#1 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /home/advanced/vendor/yiisoft/yii2/base/ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /home/advanced/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /home/advanced/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#9 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('', Array)
+#10 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#12 {main}
+2016-09-04 00:56:50 [127.0.0.1][-][33a4b6568409ccdb20fcc8f675d4d3d4][info][application] $_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_no-gzip' => '1'
+    'REDIRECT_dont-vary' => '1'
+    'REDIRECT_SCRIPT_URL' => '/images/background.jpg'
+    'REDIRECT_SCRIPT_URI' => 'http://admin.sciensys.dev/images/background.jpg'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/images/background.jpg'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/images/background.jpg'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53294'
+    'REDIRECT_URL' => '/images/background.jpg'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/images/background.jpg'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472930810.76
+    'REQUEST_TIME' => 1472930810
+    'argv' => []
+    'argc' => 0
+]
+2016-09-04 00:57:59 [127.0.0.1][-][e39936d3f540ae3a36445fee96edead7][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Required' in /home/advanced/vendor/yiisoft/yii2/web/User.php:435
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(149): yii\web\User->loginRequired()
+#1 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /home/advanced/vendor/yiisoft/yii2/base/ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /home/advanced/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /home/advanced/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#9 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('', Array)
+#10 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#12 {main}
+2016-09-04 00:57:59 [127.0.0.1][-][e39936d3f540ae3a36445fee96edead7][info][application] $_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/css/other.css'
+    'REDIRECT_SCRIPT_URI' => 'http://admin.sciensys.dev/css/other.css'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/css/other.css'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/css/other.css'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53305'
+    'REDIRECT_URL' => '/css/other.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/css/other.css'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472930879.9
+    'REQUEST_TIME' => 1472930879
+    'argv' => []
+    'argc' => 0
+]
+2016-09-04 00:58:42 [127.0.0.1][-][c89d655a666e177d4477b3a29a8026af][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'Login Required' in /home/advanced/vendor/yiisoft/yii2/web/User.php:435
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(149): yii\web\User->loginRequired()
+#1 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#2 /home/advanced/vendor/yiisoft/yii2/base/ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#3 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#4 /home/advanced/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#5 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#6 /home/advanced/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('', Array)
+#9 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('', Array)
+#10 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#12 {main}
+2016-09-04 00:58:42 [127.0.0.1][-][c89d655a666e177d4477b3a29a8026af][info][application] $_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/css/other.css'
+    'REDIRECT_SCRIPT_URI' => 'http://admin.sciensys.dev/css/other.css'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/css/other.css'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/css/other.css'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/css,*/*;q=0.1'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53316'
+    'REDIRECT_URL' => '/css/other.css'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/css/other.css'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472930922.47
+    'REQUEST_TIME' => 1472930922
+    'argv' => []
+    'argc' => 0
+]
+2016-09-04 01:02:18 [127.0.0.1][7][55785b353934b7a55e0aebc397ce670e][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "user-detail/view-me".' in /home/advanced/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('user-detail/vie...', Array)
+#1 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/advanced/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-04 01:02:18 [127.0.0.1][7][55785b353934b7a55e0aebc397ce670e][info][application] $_GET = [
+    'r' => 'user-detail/view-me'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53377'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user-detail%2Fview-me'
+    'REQUEST_URI' => '/index.php?r=user-detail%2Fview-me'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931138.39
+    'REQUEST_TIME' => 1472931138
+    'argv' => [
+        0 => 'r=user-detail%2Fview-me'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:02:19 [127.0.0.1][7][2180e10eef070c2244c1be2ed3e4f43b][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "business-detail/view-me".' in /home/advanced/vendor/yiisoft/yii2/base/Module.php:460
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('business-detail...', Array)
+#1 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/advanced/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-04 01:02:19 [127.0.0.1][7][2180e10eef070c2244c1be2ed3e4f43b][info][application] $_GET = [
+    'r' => 'business-detail/view-me'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php?r=user-detail%2Fview-me'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53377'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=business-detail%2Fview-me'
+    'REQUEST_URI' => '/index.php?r=business-detail%2Fview-me'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931139.96
+    'REQUEST_TIME' => 1472931139
+    'argv' => [
+        0 => 'r=business-detail%2Fview-me'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:04:08 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getFirstErrors() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:1175
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:04:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php?r=business-detail%2Fview-me'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53408'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931248.76
+    'REQUEST_TIME' => 1472931248
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:05:18 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getFirstErrors() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:1175
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:05:18 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53423'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931318.67
+    'REQUEST_TIME' => 1472931318
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:05:48 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Missing argument 1 for backend\models\DocumentDetailSearch::search(), called in /home/advanced/backend/controllers/DocumentDetailController.php on line 78 and defined' in /home/advanced/backend/models/DocumentDetailSearch.php:41
+Stack trace:
+#0 /home/advanced/backend/models/DocumentDetailSearch.php(41): yii\base\ErrorHandler->handleError(2, 'Missing argumen...', '/home/advanced/...', 41, Array)
+#1 /home/advanced/backend/controllers/DocumentDetailController.php(78): backend\models\DocumentDetailSearch->search()
+#2 [internal function]: backend\controllers\DocumentDetailController->actionIndex()
+#3 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#5 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#6 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#7 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#9 {main}
+2016-09-04 01:05:48 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53437'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931348.8
+    'REQUEST_TIME' => 1472931348
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:06:21 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getFirstErrors() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:1175
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:06:21 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53445'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931381.32
+    'REQUEST_TIME' => 1472931381
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:06:22 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getFirstErrors() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:1175
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:06:22 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53446'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931382.04
+    'REQUEST_TIME' => 1472931382
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:06:22 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getFirstErrors() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:1175
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:06:22 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53447'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931382.4
+    'REQUEST_TIME' => 1472931382
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:06:24 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getFirstErrors() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:1175
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:06:24 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53448'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931384.83
+    'REQUEST_TIME' => 1472931384
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:06:47 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getFirstErrors() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:1175
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:06:47 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53463'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931407.77
+    'REQUEST_TIME' => 1472931407
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:08:02 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getFirstErrors() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:1175
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:08:02 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53532'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931482.24
+    'REQUEST_TIME' => 1472931482
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:09:29 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getFirstErrors() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:1175
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:09:28 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53587'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931568.94
+    'REQUEST_TIME' => 1472931568
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:11:14 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getFirstErrors() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:1175
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:11:14 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53632'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931674.3
+    'REQUEST_TIME' => 1472931674
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:11:32 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getModels() on a non-object' in /home/advanced/backend/views/document-detail/index.php:19
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:11:32 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53637'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931692.34
+    'REQUEST_TIME' => 1472931692
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:11:38 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getFirstErrors() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:1175
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:11:38 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53641'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931698.56
+    'REQUEST_TIME' => 1472931698
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:15:50 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function formName() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:2078
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:15:50 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53681'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931950.82
+    'REQUEST_TIME' => 1472931950
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:15:52 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function formName() on a non-object' in /home/advanced/vendor/yiisoft/yii2/helpers/BaseHtml.php:2078
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 01:15:52 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53682'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931952.2
+    'REQUEST_TIME' => 1472931952
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:16:28 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'backend\controllers\DocumentDetailController' in file: /home/advanced/backend/controllers/DocumentDetailController.php. Namespace missing?' in /home/advanced/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\control...')
+#1 [internal function]: spl_autoload_call('backend\control...')
+#2 /home/advanced/vendor/yiisoft/yii2/base/Module.php(562): class_exists('backend\control...')
+#3 /home/advanced/vendor/yiisoft/yii2/base/Module.php(520): yii\base\Module->createControllerByID('document-detail')
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('document-detail...')
+#5 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#6 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-04 01:16:28 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53694'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472931988.85
+    'REQUEST_TIME' => 1472931988
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 01:16:48 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'backend\controllers\DocumentDetailController' in file: /home/advanced/backend/controllers/DocumentDetailController.php. Namespace missing?' in /home/advanced/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('backend\control...')
+#1 [internal function]: spl_autoload_call('backend\control...')
+#2 /home/advanced/vendor/yiisoft/yii2/base/Module.php(562): class_exists('backend\control...')
+#3 /home/advanced/vendor/yiisoft/yii2/base/Module.php(520): yii\base\Module->createControllerByID('document-detail')
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('document-detail...')
+#5 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#6 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-04 01:16:48 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    '_identity-backend' => '50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; _identity-backend=50d825482bdd8d94987aec267e1d7c0d0242ccb958b4ec7d45e1271e857b142fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '53702'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472932008.09
+    'REQUEST_TIME' => 1472932008
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-04 03:50:36 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function isRootUser() on a non-object' in /home/advanced/common/models/LoginForm.php:59
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-04 03:50:36 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'TlEwSEdkMkh8Hn1xGAZKMSRiagZ2CkQCAmd0DzElVxkhOVo9cgxacQ=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'White1@2'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '209'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://admin.sciensys.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '55968'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472941236.59
+    'REQUEST_TIME' => 1472941236
+    'argv' => [
+        0 => 'r=site%2Flogin'
+    ]
+    'argc' => 1
+]
+2016-09-04 04:07:30 [127.0.0.1][10][3e3a644e680f8e9fd70254221da67905][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/advanced/vendor/yiisoft/yii2/base/ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/advanced/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/advanced/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('get-notificatio...', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('site/get-notifi...', Array)
+#9 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-09-04 04:07:30 [127.0.0.1][10][3e3a644e680f8e9fd70254221da67905][info][application] $_GET = [
+    'r' => 'site/get-notifications'
+    'userId' => '10'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    'userId' => 'fcd3ddd092579c5c2e4f38a794457112edf04f5a6e8631943bd1f6025cd36e66a:2:{i:0;s:6:\"userId\";i:1;i:10;}'
+    '_identity-backend' => '32e71f2f837ef6c520e8512d94f482b327fd9894c9a3a6037c84f7ef5a2d8c8fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 10
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => 'MUhfZzhEdjEDBxJeZyYOSFt7BSkJKgB7fX4bIE4FE2BeIDUSDSweCA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; userId=fcd3ddd092579c5c2e4f38a794457112edf04f5a6e8631943bd1f6025cd36e66a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A10%3B%7D; _identity-backend=32e71f2f837ef6c520e8512d94f482b327fd9894c9a3a6037c84f7ef5a2d8c8fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56314'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/get-notifications&userId=10'
+    'REQUEST_URI' => '/index.php?r=site/get-notifications&userId=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472942250
+    'REQUEST_TIME' => 1472942249
+    'argv' => [
+        0 => 'r=site/get-notifications&userId=10'
+    ]
+    'argc' => 1
+]
+2016-09-04 04:07:45 [127.0.0.1][10][fea8539d2fcd1d67812dbc62fa9dac21][error][yii\web\HttpException:403] exception 'yii\web\ForbiddenHttpException' with message 'You are not allowed to perform this action.' in /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php:151
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/filters/AccessControl.php(134): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /home/advanced/vendor/yiisoft/yii2/base/ActionFilter.php(73): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /home/advanced/vendor/yiisoft/yii2/base/Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(269): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /home/advanced/vendor/yiisoft/yii2/web/Controller.php(108): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(152): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('get-notificatio...', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('site/get-notifi...', Array)
+#9 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-09-04 04:07:45 [127.0.0.1][10][fea8539d2fcd1d67812dbc62fa9dac21][info][application] $_GET = [
+    'r' => 'site/get-notifications'
+    'userId' => '10'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    'userId' => 'fcd3ddd092579c5c2e4f38a794457112edf04f5a6e8631943bd1f6025cd36e66a:2:{i:0;s:6:\"userId\";i:1;i:10;}'
+    '_identity-backend' => '32e71f2f837ef6c520e8512d94f482b327fd9894c9a3a6037c84f7ef5a2d8c8fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 10
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_X_CSRF_TOKEN' => 'MUhfZzhEdjEDBxJeZyYOSFt7BSkJKgB7fX4bIE4FE2BeIDUSDSweCA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; userId=fcd3ddd092579c5c2e4f38a794457112edf04f5a6e8631943bd1f6025cd36e66a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A10%3B%7D; _identity-backend=32e71f2f837ef6c520e8512d94f482b327fd9894c9a3a6037c84f7ef5a2d8c8fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56321'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/get-notifications&userId=10'
+    'REQUEST_URI' => '/index.php?r=site/get-notifications&userId=10'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472942265
+    'REQUEST_TIME' => 1472942264
+    'argv' => [
+        0 => 'r=site/get-notifications&userId=10'
+    ]
+    'argc' => 1
+]
+2016-09-04 04:09:15 [127.0.0.1][10][21ce0dddd44484fafce89ec9057090d8][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: document-detail/view' in /home/advanced/vendor/yiisoft/yii2/base/Controller.php:125
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('view', Array)
+#1 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#2 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/advanced/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-04 04:09:15 [127.0.0.1][10][21ce0dddd44484fafce89ec9057090d8][info][application] $_GET = [
+    'r' => 'document-detail/view'
+    'id' => '17'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    'userId' => 'fcd3ddd092579c5c2e4f38a794457112edf04f5a6e8631943bd1f6025cd36e66a:2:{i:0;s:6:\"userId\";i:1;i:10;}'
+    '_identity-backend' => '32e71f2f837ef6c520e8512d94f482b327fd9894c9a3a6037c84f7ef5a2d8c8fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 10
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; userId=fcd3ddd092579c5c2e4f38a794457112edf04f5a6e8631943bd1f6025cd36e66a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A10%3B%7D; _identity-backend=32e71f2f837ef6c520e8512d94f482b327fd9894c9a3a6037c84f7ef5a2d8c8fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56374'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail/view&id=17'
+    'REQUEST_URI' => '/index.php?r=document-detail/view&id=17'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472942355.93
+    'REQUEST_TIME' => 1472942355
+    'argv' => [
+        0 => 'r=document-detail/view&id=17'
+    ]
+    'argc' => 1
+]
+2016-09-04 04:09:25 [127.0.0.1][10][a8f3388ead684d3592656c30d4501a30][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: document-detail/view' in /home/advanced/vendor/yiisoft/yii2/base/Controller.php:125
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('view', Array)
+#1 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#2 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/advanced/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-04 04:09:25 [127.0.0.1][10][a8f3388ead684d3592656c30d4501a30][info][application] $_GET = [
+    'r' => 'document-detail/view'
+    'id' => '17'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    'userId' => 'fcd3ddd092579c5c2e4f38a794457112edf04f5a6e8631943bd1f6025cd36e66a:2:{i:0;s:6:\"userId\";i:1;i:10;}'
+    '_identity-backend' => '32e71f2f837ef6c520e8512d94f482b327fd9894c9a3a6037c84f7ef5a2d8c8fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 10
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; userId=fcd3ddd092579c5c2e4f38a794457112edf04f5a6e8631943bd1f6025cd36e66a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A10%3B%7D; _identity-backend=32e71f2f837ef6c520e8512d94f482b327fd9894c9a3a6037c84f7ef5a2d8c8fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '56384'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail/view&id=17'
+    'REQUEST_URI' => '/index.php?r=document-detail/view&id=17'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472942365.11
+    'REQUEST_TIME' => 1472942365
+    'argv' => [
+        0 => 'r=document-detail/view&id=17'
+    ]
+    'argc' => 1
+]
+2016-09-04 05:01:03 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'Creating default object from empty value' in /home/advanced/backend/controllers/DocumentDetailController.php:83
+Stack trace:
+#0 /home/advanced/backend/controllers/DocumentDetailController.php(83): yii\base\ErrorHandler->handleError(2, 'Creating defaul...', '/home/advanced/...', 83, Array)
+#1 [internal function]: backend\controllers\DocumentDetailController->actionIndex()
+#2 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#5 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#6 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-04 05:01:03 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+    '/document-detail/index' => 'kv-demo'
+]
+
+$_POST = [
+    '_csrf-backend' => 'clBfSUFiY09AHxJwHgAbNhhjBQdwDBUFPmYbDjcjBh4dODU8dAoLdg=='
+    'DocumentDetail' => [
+        'status' => '0'
+        'id' => '4'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    'userId' => 'fcd3ddd092579c5c2e4f38a794457112edf04f5a6e8631943bd1f6025cd36e66a:2:{i:0;s:6:\"userId\";i:1;i:10;}'
+    '_identity-backend' => '32e71f2f837ef6c520e8512d94f482b327fd9894c9a3a6037c84f7ef5a2d8c8fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '128'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://admin.sciensys.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://admin.sciensys.dev/index.php?r=document-detail%2Findex&%2Fdocument-detail%2Findex=kv-demo'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; userId=fcd3ddd092579c5c2e4f38a794457112edf04f5a6e8631943bd1f6025cd36e66a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A10%3B%7D; _identity-backend=32e71f2f837ef6c520e8512d94f482b327fd9894c9a3a6037c84f7ef5a2d8c8fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '58213'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=document-detail%2Findex&%2Fdocument-detail%2Findex=kv-demo'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex&%2Fdocument-detail%2Findex=kv-demo'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472945463.38
+    'REQUEST_TIME' => 1472945463
+    'argv' => [
+        0 => 'r=document-detail%2Findex&%2Fdocument-detail%2Findex=kv-demo'
+    ]
+    'argc' => 1
+]
+2016-09-04 05:01:43 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: kartik\detail\DetailView::pluginDestroyJs' in /home/advanced/vendor/yiisoft/yii2/base/Component.php:143
+Stack trace:
+#0 /home/advanced/vendor/kartik-v/yii2-krajee-base/WidgetTrait.php(145): yii\base\Component->__get('pluginDestroyJs')
+#1 /home/advanced/vendor/kartik-v/yii2-krajee-base/WidgetTrait.php(165): kartik\detail\DetailView->getPluginScript('kvDetailView', 'jQuery("#kv-dem...', NULL, NULL)
+#2 /home/advanced/vendor/kartik-v/yii2-detail-view/DetailView.php(960): kartik\detail\DetailView->registerPlugin('kvDetailView', 'jQuery("#kv-dem...')
+#3 /home/advanced/vendor/kartik-v/yii2-detail-view/DetailView.php(541): kartik\detail\DetailView->registerAssets()
+#4 /home/advanced/vendor/yiisoft/yii2/base/Object.php(107): kartik\detail\DetailView->init()
+#5 [internal function]: yii\base\Object->__construct(Array)
+#6 /home/advanced/vendor/yiisoft/yii2/di/Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#7 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('kartik\detail\D...', Array, Array)
+#8 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('kartik\detail\D...', Array, Array)
+#9 /home/advanced/vendor/yiisoft/yii2/base/Widget.php(101): yii\BaseYii::createObject(Array)
+#10 /home/advanced/backend/views/document-detail/_list_item.php(82): yii\base\Widget::widget(Array)
+#11 /home/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/advanced/...')
+#12 /home/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/advanced/...', Array)
+#13 /home/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/advanced/...', Array, NULL)
+#14 /home/advanced/vendor/yiisoft/yii2/widgets/ListView.php(100): yii\base\View->render('_list_item', Array)
+#15 /home/advanced/vendor/yiisoft/yii2/widgets/ListView.php(77): yii\widgets\ListView->renderItem(Object(common\models\DocumentDetail), 20, 0)
+#16 /home/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(151): yii\widgets\ListView->renderItems()
+#17 /home/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(126): yii\widgets\BaseListView->renderSection('{items}')
+#18 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#19 /home/advanced/vendor/yiisoft/yii2/widgets/BaseListView.php(129): preg_replace_callback('/{\w+}/', Object(Closure), '{pager}?{items}...')
+#20 /home/advanced/vendor/yiisoft/yii2/base/Widget.php(102): yii\widgets\BaseListView->run()
+#21 /home/advanced/backend/views/document-detail/index.php(28): yii\base\Widget::widget(Array)
+#22 /home/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/advanced/...')
+#23 /home/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/advanced/...', Array)
+#24 /home/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/advanced/...', Array, Object(backend\controllers\DocumentDetailController))
+#25 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('index', Array, Object(backend\controllers\DocumentDetailController))
+#26 /home/advanced/backend/controllers/DocumentDetailController.php(123): yii\base\Controller->render('index', Array)
+#27 [internal function]: backend\controllers\DocumentDetailController->actionIndex()
+#28 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#29 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#30 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#31 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#32 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 /home/advanced/backend/web/index.php(18): yii\base\Application->run()
+#34 {main}
+2016-09-04 05:01:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-backend' => '9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"2OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9\";}'
+    'userId' => 'fcd3ddd092579c5c2e4f38a794457112edf04f5a6e8631943bd1f6025cd36e66a:2:{i:0;s:6:\"userId\";i:1;i:10;}'
+    '_identity-backend' => '32e71f2f837ef6c520e8512d94f482b327fd9894c9a3a6037c84f7ef5a2d8c8fa:2:{i:0;s:17:\"_identity-backend\";i:1;s:47:\"[10,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://admin.sciensys.dev/index.php'
+    'HTTP_HOST' => 'admin.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-backend=9d64756138f2ede7a42e180d52f88cf7e5d1c2e47dd7b94331722e52bda95314a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%222OM9_bxyj3ZN1nvJL6DGvAeQohju5hh9%22%3B%7D; userId=fcd3ddd092579c5c2e4f38a794457112edf04f5a6e8631943bd1f6025cd36e66a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A10%3B%7D; _identity-backend=32e71f2f837ef6c520e8512d94f482b327fd9894c9a3a6037c84f7ef5a2d8c8fa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A47%3A%22%5B10%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'admin.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/backend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '58255'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1472945503.72
+    'REQUEST_TIME' => 1472945503
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
