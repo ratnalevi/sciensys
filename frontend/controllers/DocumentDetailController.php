@@ -108,10 +108,15 @@ class DocumentDetailController extends Controller
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        $business = BusinessDetail::find()->andWhere(['user_id' => $id])->one();
+        $personal = UserDetail::find()->andWhere(['user_id' => $id ] )->one();
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
             'model' => $model,
+            'business' => $business,
+            'personal' => $personal
         ]);
     }
 

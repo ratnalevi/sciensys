@@ -37,6 +37,16 @@ class UserDetailController extends Controller
     public function actionViewMe()
     {
         $id = Yii::$app->user->identity->id;
+
+        $model = $this->findModel($id);
+
+        if($model === null || $id == 0 ){
+            $model = new UserDetail();
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
+
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -70,13 +80,14 @@ class UserDetailController extends Controller
      */
     public function actionUpdate($id = 0 )
     {
-        if( $id == 0 ){
+        $model = $this->findModel($id);
+
+        if($model === null || $id == 0 ){
             $model = new UserDetail();
             return $this->render('create', [
                 'model' => $model,
             ]);
         }
-        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view-me']);
@@ -92,6 +103,13 @@ class UserDetailController extends Controller
         $id = Yii::$app->user->id;
 
         $model = $this->findModel($id);
+
+        if($model === null || $id == 0 ){
+            $model = new UserDetail();
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view-me']);
@@ -117,7 +135,7 @@ class UserDetailController extends Controller
             if (($model = UserDetail::findByUserId($id)) !== null) {
                 return $model;
             } else {
-                throw new NotFoundHttpException('The requested page does not exist.');
+                return null;
             }
         }
     }

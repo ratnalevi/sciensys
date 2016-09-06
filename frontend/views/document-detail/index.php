@@ -11,25 +11,26 @@ use yii\helpers\ArrayHelper;
 /* @var $searchModel frontend\models\DocumentDetailSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 /* @var $model \common\models\DocumentDetail */
+/* @var $personal \common\models\UserDetail*/
+/* @var $business \common\models\BusinessDetail */
 $this->title = 'Document Details';
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
 
 <div class="document-detail-index">
 
-    <div class="">
-        <?= Html::a('<i class="fa glyphicon glyphicon-file"></i> Final Document ', ['/document-detail/get-report'], [
+        <?php
+        if( $personal !== null && $business !== null ){
+        echo Html::a('<i class="fa glyphicon glyphicon-file"></i> Final Document ', ['/document-detail/get-report'], [
             'class'=>'btn btn-primary',
             'target'=>'_blank',
             'data-toggle'=>'tooltip',
             'title'=>'Please download your final business document'
         ]);
-        ?>
-
-    </div>
-
-
-    <?php
+        }else{
+            echo '<p style="font-size: medium; font-style: oblique">Please fill your personal details / business details to download the final assessment document</p>';
+        }
 
     $docs = $dataProvider->getModels();
     $form = ActiveForm::begin([

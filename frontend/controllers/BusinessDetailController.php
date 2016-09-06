@@ -40,6 +40,15 @@ class BusinessDetailController extends Controller
 
         $model = $this->findModel($id);
 
+        if($model === null ){
+            $model = new BusinessDetail();
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
+
+        $model = $this->findModel($id);
+
         if( $model === null ){
             return $this->render('view', [
                 'model' => new BusinessDetail(),
@@ -82,13 +91,14 @@ class BusinessDetailController extends Controller
      */
     public function actionUpdate($id = 0 )
     {
-        if( $id == 0 ){
+        $model = $this->findModel($id);
+
+        if($model === null || $id == 0 ){
             $model = new BusinessDetail();
             return $this->render('create', [
                 'model' => $model,
             ]);
         }
-        $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view-me']);
@@ -104,6 +114,14 @@ class BusinessDetailController extends Controller
         $id = Yii::$app->user->id;
 
         $model = $this->findModel($id);
+
+        if($model === null || $id == 0 ){
+            $model = new BusinessDetail();
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
+
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view-me']);
