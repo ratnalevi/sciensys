@@ -29,6 +29,7 @@ $fieldOptions2 = [
 
         <?php $form = ActiveForm::begin(['id' => 'login-form', 'enableClientValidation' => false]); ?>
 
+        <?= $form->errorSummary($model); ?>
         <?= $form
             ->field($model, 'username', $fieldOptions1)
             ->label(false)

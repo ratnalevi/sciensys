@@ -78,7 +78,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        $model = new LoginForm();
+        $model = new LoginForm(['scenario' => 'backend']);
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             $cookies = Yii::$app->request->cookies;
             if ( $cookies->has('userId') ){

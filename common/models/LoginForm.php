@@ -27,7 +27,8 @@ class LoginForm extends Model
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
-            ['password', 'validatePassword'],
+            ['password', 'validateBackend', 'on' => 'backend'],
+            ['password', 'validatePassword', 'on' => 'frontend'],
         ];
     }
 
@@ -48,6 +49,20 @@ class LoginForm extends Model
         }
     }
 
+    public function validateBackend($attribute, $params)
+    {
+        if (!$this->hasErrors()) {
+            $user = $this->getUser();
+            if (!$user || !$user->validatePassword($this->password)) {
+                $this->addError($attribute, 'Incorrect username or password.');
+            }
+            if( !$user->isRootUser() ){
+                $this->addError(null, 'You do not have admin privileges');
+                return false;
+            }
+        }
+    }
+
     /**
      * Logs in a user using the provided username and password.
      *
@@ -58,10 +73,6 @@ class LoginForm extends Model
         $user = $this->getUser();
         if( $user === null ){
             $this->addError(null, 'User not found');
-            return false;
-        }
-        if( !$user->isRootUser() ){
-            $this->addError(null, 'You do not have admin privileges');
             return false;
         }
         if ($this->validate()) {

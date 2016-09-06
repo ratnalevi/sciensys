@@ -92,7 +92,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        $model = new LoginForm();
+        $model = new LoginForm(['scenario' => 'frontend']);
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             $cookies = Yii::$app->request->cookies;
             if ( $cookies->has('userId') ){
@@ -103,7 +103,6 @@ class SiteController extends Controller
             $cookies->add(new \yii\web\Cookie([
                 'name' => 'userId',
                 'value' => Yii::$app->user->id,
-                'httpOnly' => false
             ]));
 
             return $this->goBack();
