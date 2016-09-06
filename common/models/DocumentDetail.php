@@ -15,6 +15,7 @@ use yii\web\UploadedFile;
  * @property string $file_url
  * @property string $file_type
  * @property integer $file_size
+ * @property integer $doc_type_id
  * @property integer $status
  * @property integer $created_at
  * @property integer $updated_at
@@ -47,12 +48,13 @@ class DocumentDetail extends \yii\db\ActiveRecord
             [['file'], 'safe'],
             [['file'], 'file', 'extensions'=>'jpg, gif, png'],
 
-            [['user_id', 'name', 'file_url', 'file_type', 'file_size', 'created_at', 'updated_at'], 'required'],
+            [['user_id', 'name', 'file_url', 'file_type', 'file_size','doc_type_id', 'created_at', 'updated_at'], 'required'],
             [['user_id', 'file_size', 'status', 'created_at', 'updated_at'], 'integer'],
             [['name'], 'string', 'max' => 128],
             [['file_url'], 'string', 'max' => 256],
             [['file_type'], 'string', 'max' => 64],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
+            [['doc_type_id'], 'exist', 'skipOnError' => true, 'targetClass' => DocumentType::className(), 'targetAttribute' => ['doc_type_id' => 'id']],
         ];
     }
 
@@ -80,6 +82,22 @@ class DocumentDetail extends \yii\db\ActiveRecord
     public function getUser()
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDocType()
+    {
+        return $this->hasOne(DocumentType::className(), ['id' => 'doc_type_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getNotifications()
+    {
+        return $this->hasMany(Notification::className(), ['document_id' => 'id']);
     }
 
     /**
@@ -119,7 +137,7 @@ class DocumentDetail extends \yii\db\ActiveRecord
         $path = Yii::$app->basePath . '/web/uploads/' . $uploadedFile->name;
 
         $url = $this->url();
-        $url = str_replace('upload', 'download', $url);
+        $url = str_replace('index', 'download', $url);
         $url .= '&file_name=' . $uploadedFile->name;
 
         $this->name = $uploadedFile->name;
@@ -128,7 +146,6 @@ class DocumentDetail extends \yii\db\ActiveRecord
         $this->file_type = $uploadedFile->type;
         $this->file_size = $uploadedFile->size;
         $this->status = static::FILE_NEW;
-        $this->created_at = time();
         $this->updated_at = time();
 
         if($this->save()){

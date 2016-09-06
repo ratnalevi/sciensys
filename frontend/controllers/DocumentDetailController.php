@@ -3,6 +3,9 @@
 namespace frontend\controllers;
 
 use common\helpers\FileHelper;
+use common\models\BusinessDetail;
+use common\models\DocumentType;
+use kartik\mpdf\Pdf;
 use common\models\User;
 use Yii;
 use common\models\DocumentDetail;
@@ -36,80 +39,33 @@ class DocumentDetailController extends Controller
         ];
     }
 
-    public function sendSMS( $numbers, $message ){
-
-        $username = 'levi@pluggd.co';
-        $hash = '1be9c8b470eb085bb20442bacb4ef4b61c09eba3';
-
-        $sender = urlencode('TXTLCL');
-        $message = rawurlencode( $message );
-
-        $numbers = implode(',', $numbers);
-
-        $data = array('username' => $username, 'hash' => $hash, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
-
-        $ch = curl_init('http://api.textlocal.in/send/');
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $response = curl_exec($ch);
-        curl_close($ch);
-
-        return $response;
-    }
-
     /**
      * Lists all DocumentDetail models.
      * @return mixed
      */
     public function actionIndex()
     {
-
-        /*
-         * Code to send sms using TextLocal
-         *
-        $message = 'Hi Levi, Thanks for signing up on our application';
-        $contacts = [9566018299];
-        $smsResponse = $this->sendSMS($contacts, $message);
-        */
-
         $searchModel = new DocumentDetailSearch();
-        $model = new DocumentDetail();
-
-        $post = Yii::$app->request->post();
-        // process ajax delete
-        if (Yii::$app->request->isAjax && isset($post['kvdelete']))
-        {
-            $id = $post['id'];
-            $doc = DocumentDetail::find()->andWhere(['id' => $id])->one();
-            if( $doc !== null ) {
-                $doc->delete();
-                echo Json::encode([
-                    'success' => true,
-                    'messages' => [
-                        'kv-detail-info' => 'Document successfully deleted',
-                    ]
-                ]);
-            }
-            else{
-                echo Json::encode([
-                    'success' => false,
-                    'messages' => [
-                        'kv-detail-info' => 'Document with given ID does not exist',
-                    ]
-                ]);
-            }
-            return;
-        }
 
         if( Yii::$app->request->isPost ){
             $params = Yii::$app->request->post('DocumentDetail');
+            $model = DocumentDetail::find()
+                ->andWhere(['doc_type_id' => $params['doc_type_id']])
+                ->andWhere(['user_id' => Yii::$app->user->id ])
+                ->one();
+
+            if( $model === null ){
+                $model = new DocumentDetail();
+                $model->created_at = time();
+            }
+
             if( isset( $params['file'] ) ){
+                $model->doc_type_id = $params['doc_type_id'];
                 if (( $model->submit()) !== null && !$model->hasErrors()) {
 
                     $userDetail = UserDetail::find()->andWhere(['user_id' => $model->user_id])->one();
 
-                    $message = '<b>' . $model->name . '</b> has been uploaded by ' . $userDetail->getFullName() . " Review required";
+                    $message = '<b>' . $model->docType->name . '</b> has been uploaded by ' . $userDetail->getFullName() . " Review required";
 
                     $admin = User::find()->andWhere(['type' => User::ROOT_USER ])->one();
 
@@ -124,12 +80,12 @@ class DocumentDetailController extends Controller
 
                     // send a message to user who uploaded the document
 
-                    /*
-                    if( $userDetail !== null && $userDetail->mobile === '' ) {
-                        $numbers = $userDetail->mobile;
-                        $smsResponse = $this->sendSMS($numbers, $message );
+                    $docs = DocumentType::find()->indexBy('id')->all();
+
+                    if( $userDetail !== null && $userDetail->mobile !== '' ) {
+                        $message = 'Dear ' . $userDetail->getFullName() . ", " . $docs[$params['doc_type_id']]->name . ' document has been uploaded successfully. We will update on approval';
+                        FileHelper::sendSMS($userDetail->mobile, $message );
                     }
-                    */
 
                     if( !$notification->save() ){
                         Yii::$app->session->setFlash('kv-detail-error', 'Updated successfully, but notification failed');
@@ -146,6 +102,8 @@ class DocumentDetailController extends Controller
                     Yii::$app->session->setFlash('kv-detail-error', 'Updation Failed');
                 }
             }
+        }else{
+            $model = new DocumentDetail();
         }
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -153,8 +111,36 @@ class DocumentDetailController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'model' => $model
+            'model' => $model,
         ]);
+    }
+
+    public function actionGetReport(){
+
+        $id = Yii::$app->user->id;
+        $business = BusinessDetail::find()->andWhere(['user_id' => $id])->one();
+        $personal = UserDetail::find()->andWhere(['user_id' => $id ] )->one();
+
+        $path = Yii::$app->basePath;
+        $pdf = new Pdf([
+            'mode' => Pdf::MODE_CORE, // leaner size using standard fonts
+            'content' => $this->renderPartial('_final_document', [
+                'personal' => $personal,
+                'business' => $business
+            ]),
+            'cssFile' => $path.  '/web/css/other.css',
+            'destination' => Pdf::DEST_BROWSER,
+            'options' => [
+                'title' => 'Business Acceptance',
+                'subject' => 'Final acceptance report generated after verifying the business details'
+            ],
+            'methods' => [
+                'SetHeader' => ['Generated By: Sciensys || Generated On: ' . date("r")],
+                'SetFooter' => ['|Page {PAGENO}|'],
+            ]
+        ]);
+        return $pdf->render();
+
     }
 
     /**

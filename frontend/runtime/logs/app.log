@@ -12448,3 +12448,805 @@ $_SERVER = [
     ]
     'argc' => 1
 ]
+2016-09-05 15:26:53 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'fopen(logo_pb.png): failed to open stream: No such file or directory' in /home/advanced/common/helpers/FPDF.php:1261
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'fopen(logo_pb.p...', '/home/advanced/...', 1261, Array)
+#1 /home/advanced/common/helpers/FPDF.php(1261): fopen('logo_pb.png', 'rb')
+#2 /home/advanced/common/helpers/FPDF.php(887): common\helpers\FPDF->_parsepng('logo_pb.png')
+#3 /home/advanced/common/helpers/PdfGenerator.php(11): common\helpers\FPDF->Image('logo_pb.png', 10, 8, 33)
+#4 /home/advanced/common/helpers/FPDF.php(336): common\helpers\PdfGenerator->Header()
+#5 /home/advanced/frontend/controllers/DocumentDetailController.php(48): common\helpers\FPDF->AddPage()
+#6 [internal function]: frontend\controllers\DocumentDetailController->actionIndex()
+#7 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#11 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#13 {main}
+2016-09-05 15:26:53 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB\";}'
+    'userId' => '5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a:2:{i:0;s:6:\"userId\";i:1;i:7;}'
+    '_identity-frontend' => 'a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_HOST' => 'frontend.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB%22%3B%7D; userId=5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A7%3B%7D; _identity-frontend=a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'frontend.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '35341'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473069413.58
+    'REQUEST_TIME' => 1473069413
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-05 15:27:16 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'fopen(logo_pb.png): failed to open stream: No such file or directory' in /home/advanced/common/helpers/FPDF.php:1261
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'fopen(logo_pb.p...', '/home/advanced/...', 1261, Array)
+#1 /home/advanced/common/helpers/FPDF.php(1261): fopen('logo_pb.png', 'rb')
+#2 /home/advanced/common/helpers/FPDF.php(887): common\helpers\FPDF->_parsepng('logo_pb.png')
+#3 /home/advanced/common/helpers/PdfGenerator.php(11): common\helpers\FPDF->Image('logo_pb.png', 10, 8, 33)
+#4 /home/advanced/common/helpers/FPDF.php(336): common\helpers\PdfGenerator->Header()
+#5 /home/advanced/frontend/controllers/DocumentDetailController.php(48): common\helpers\FPDF->AddPage()
+#6 [internal function]: frontend\controllers\DocumentDetailController->actionIndex()
+#7 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#11 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#13 {main}
+2016-09-05 15:27:16 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB\";}'
+    'userId' => '5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a:2:{i:0;s:6:\"userId\";i:1;i:7;}'
+    '_identity-frontend' => 'a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_HOST' => 'frontend.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB%22%3B%7D; userId=5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A7%3B%7D; _identity-frontend=a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'frontend.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '35359'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473069436.54
+    'REQUEST_TIME' => 1473069436
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-05 15:33:04 [127.0.0.1][-][-][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'include(helveticab.php): failed to open stream: No such file or directory' in /home/advanced/common/helpers/FPDF.php:1145
+Stack trace:
+#0 /home/advanced/common/helpers/FPDF.php(1145): yii\base\ErrorHandler->handleError(2, 'include(helveti...', '/home/advanced/...', 1145, Array)
+#1 /home/advanced/common/helpers/FPDF.php(1145): common\helpers\FPDF::_loadfont()
+#2 /home/advanced/common/helpers/FPDF.php(461): common\helpers\FPDF->_loadfont('helveticab.php')
+#3 /home/advanced/common/helpers/FPDF.php(509): common\helpers\FPDF->AddFont('helvetica', 'B')
+#4 /home/advanced/common/helpers/PdfGenerator.php(17): common\helpers\FPDF->SetFont('Arial', 'B', 15)
+#5 /home/advanced/common/helpers/FPDF.php(336): common\helpers\PdfGenerator->Header()
+#6 /home/advanced/frontend/controllers/DocumentDetailController.php(49): common\helpers\FPDF->AddPage()
+#7 [internal function]: frontend\controllers\DocumentDetailController->actionIndex()
+#8 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#9 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#11 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#12 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /home/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#14 {main}
+2016-09-05 15:33:03 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB\";}'
+    'userId' => '5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a:2:{i:0;s:6:\"userId\";i:1;i:7;}'
+    '_identity-frontend' => 'a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_HOST' => 'frontend.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB%22%3B%7D; userId=5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A7%3B%7D; _identity-frontend=a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'frontend.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '35409'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473069783.92
+    'REQUEST_TIME' => 1473069783
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-05 15:35:30 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'common\helpers\Exception' not found' in /home/advanced/common/helpers/FPDF.php:273
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-05 15:35:30 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB\";}'
+    'userId' => '5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a:2:{i:0;s:6:\"userId\";i:1;i:7;}'
+    '_identity-frontend' => 'a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_HOST' => 'frontend.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB%22%3B%7D; userId=5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A7%3B%7D; _identity-frontend=a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'frontend.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '35422'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473069930.17
+    'REQUEST_TIME' => 1473069930
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-05 15:36:08 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'common\helpers\Exception' not found' in /home/advanced/common/helpers/FPDF.php:273
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-05 15:36:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB\";}'
+    'userId' => '5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a:2:{i:0;s:6:\"userId\";i:1;i:7;}'
+    '_identity-frontend' => 'a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_HOST' => 'frontend.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB%22%3B%7D; userId=5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A7%3B%7D; _identity-frontend=a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'frontend.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '35434'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473069968.63
+    'REQUEST_TIME' => 1473069968
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-05 15:36:51 [127.0.0.1][-][-][error][Exception] exception 'Exception' with message 'FPDF error: Unsupported image type: 20' in /home/advanced/common/helpers/FPDF.php:273
+Stack trace:
+#0 /home/advanced/common/helpers/FPDF.php(886): common\helpers\FPDF->Error('Unsupported ima...')
+#1 /home/advanced/common/helpers/PdfGenerator.php(15): common\helpers\FPDF->Image('/home/advanced/...', 10, 8, 33, 20, 20)
+#2 /home/advanced/common/helpers/FPDF.php(336): common\helpers\PdfGenerator->Header()
+#3 /home/advanced/frontend/controllers/DocumentDetailController.php(49): common\helpers\FPDF->AddPage()
+#4 [internal function]: frontend\controllers\DocumentDetailController->actionIndex()
+#5 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#6 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#7 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#9 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /home/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#11 {main}
+2016-09-05 15:36:51 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB\";}'
+    'userId' => '5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a:2:{i:0;s:6:\"userId\";i:1;i:7;}'
+    '_identity-frontend' => 'a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_HOST' => 'frontend.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB%22%3B%7D; userId=5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A7%3B%7D; _identity-frontend=a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'frontend.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '35439'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473070011.53
+    'REQUEST_TIME' => 1473070011
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-05 16:40:23 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to a member function getFullName() on a non-object' in /home/advanced/frontend/views/document-detail/_final_document.php:79
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-05 16:40:23 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'document-detail/get-report'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB\";}'
+    'userId' => '5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a:2:{i:0;s:6:\"userId\";i:1;i:7;}'
+    '_identity-frontend' => 'a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_HOST' => 'frontend.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://frontend.sciensys.dev/index.php?r=document-detail%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB%22%3B%7D; userId=5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A7%3B%7D; _identity-frontend=a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'frontend.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '36436'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Fget-report'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Fget-report'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473073823.3
+    'REQUEST_TIME' => 1473073823
+    'argv' => [
+        0 => 'r=document-detail%2Fget-report'
+    ]
+    'argc' => 1
+]
+2016-09-05 18:02:42 [127.0.0.1][7][05d54397db187707ba3be2435aaf8729][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'The requested page does not exist.' in /home/advanced/frontend/controllers/DocumentDetailController.php:190
+Stack trace:
+#0 /home/advanced/frontend/controllers/DocumentDetailController.php(153): frontend\controllers\DocumentDetailController->findModel('null')
+#1 [internal function]: frontend\controllers\DocumentDetailController->actionView('null')
+#2 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#3 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('view', Array)
+#5 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#6 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#8 {main}
+2016-09-05 18:02:41 [127.0.0.1][7][05d54397db187707ba3be2435aaf8729][info][application] $_GET = [
+    'r' => 'document-detail/view'
+    'id' => 'null'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB\";}'
+    'userId' => '5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a:2:{i:0;s:6:\"userId\";i:1;i:7;}'
+    '_identity-frontend' => 'a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_HOST' => 'frontend.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://frontend.sciensys.dev/index.php?r=document-detail%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB%22%3B%7D; userId=5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A7%3B%7D; _identity-frontend=a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'frontend.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '38317'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail/view&id=null'
+    'REQUEST_URI' => '/index.php?r=document-detail/view&id=null'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473078761.99
+    'REQUEST_TIME' => 1473078761
+    'argv' => [
+        0 => 'r=document-detail/view&id=null'
+    ]
+    'argc' => 1
+]
+2016-09-05 18:14:42 [127.0.0.1][7][e84c61193ba6455016f72d69a8b583d3][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'echo' (T_ECHO)' in /home/advanced/frontend/views/document-detail/index.php:124
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-05 18:14:41 [127.0.0.1][7][e84c61193ba6455016f72d69a8b583d3][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB\";}'
+    'userId' => '5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a:2:{i:0;s:6:\"userId\";i:1;i:7;}'
+    '_identity-frontend' => 'a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_HOST' => 'frontend.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB%22%3B%7D; userId=5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A7%3B%7D; _identity-frontend=a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'frontend.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '38541'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473079482
+    'REQUEST_TIME' => 1473079481
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-05 18:40:31 [127.0.0.1][7][408b5208c6f2f23d3a90c1b49cccbb32][error][yii\base\ErrorException:4096] exception 'yii\base\ErrorException' with message 'Object of class yii\bootstrap\Modal could not be converted to string' in /home/advanced/frontend/views/document-detail/index.php:138
+Stack trace:
+#0 /home/advanced/frontend/views/document-detail/index.php(138): yii\base\ErrorHandler->handleError(4096, 'Object of class...', '/home/advanced/...', 138, Array)
+#1 /home/advanced/vendor/yiisoft/yii2/base/View.php(325): require('/home/advanced/...')
+#2 /home/advanced/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/advanced/...', Array)
+#3 /home/advanced/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/advanced/...', Array, Object(frontend\controllers\DocumentDetailController))
+#4 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('index', Array, Object(frontend\controllers\DocumentDetailController))
+#5 /home/advanced/frontend/controllers/DocumentDetailController.php(124): yii\base\Controller->render('index', Array)
+#6 [internal function]: frontend\controllers\DocumentDetailController->actionIndex()
+#7 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#10 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#11 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /home/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#13 {main}
+2016-09-05 18:40:31 [127.0.0.1][7][408b5208c6f2f23d3a90c1b49cccbb32][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB\";}'
+    'userId' => '5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a:2:{i:0;s:6:\"userId\";i:1;i:7;}'
+    '_identity-frontend' => 'a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_HOST' => 'frontend.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB%22%3B%7D; userId=5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A7%3B%7D; _identity-frontend=a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'frontend.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '39051'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473081031.74
+    'REQUEST_TIME' => 1473081031
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]
+2016-09-05 19:22:27 [127.0.0.1][7][20672c0d0ee3ee9d8dc5001757293320][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: document-detail/upload' in /home/advanced/vendor/yiisoft/yii2/base/Controller.php:125
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('upload', Array)
+#1 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#2 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /home/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/advanced/vendor/yiisoft/yii2/web/Application.php:99
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#2 {main}
+2016-09-05 19:22:27 [127.0.0.1][7][20672c0d0ee3ee9d8dc5001757293320][info][application] $_GET = [
+    'r' => 'document-detail/upload'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB\";}'
+    'userId' => '5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a:2:{i:0;s:6:\"userId\";i:1;i:7;}'
+    '_identity-frontend' => 'a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_HOST' => 'frontend.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://frontend.sciensys.dev/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB%22%3B%7D; userId=5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A7%3B%7D; _identity-frontend=a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'frontend.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '40128'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=document-detail%2Fupload'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Fupload'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473083547.42
+    'REQUEST_TIME' => 1473083547
+    'argv' => [
+        0 => 'r=document-detail%2Fupload'
+    ]
+    'argc' => 1
+]
+2016-09-05 19:42:52 [127.0.0.1][7][fe009917ee7149a8799e92bc318ac761][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'implode(): Invalid arguments passed' in /home/advanced/common/helpers/FileHelper.php:151
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'implode(): Inva...', '/home/advanced/...', 151, Array)
+#1 /home/advanced/common/helpers/FileHelper.php(151): implode(',', '9566018299')
+#2 /home/advanced/frontend/controllers/DocumentDetailController.php(88): common\helpers\FileHelper::sendSMS('9566018299', 'Dear Levi Ratna...')
+#3 [internal function]: frontend\controllers\DocumentDetailController->actionIndex()
+#4 /home/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#7 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('document-detail...', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /home/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#10 {main}
+2016-09-05 19:42:52 [127.0.0.1][7][fe009917ee7149a8799e92bc318ac761][info][application] $_GET = [
+    'r' => 'document-detail/index'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'NFUwUmV2ZUhZNlUNKj4EI0MRSCJUHVYaRi0DHTMYFiFeBnIDSCYWCg=='
+    'DocumentDetail' => [
+        'doc_type_id' => '4'
+        'file' => ''
+    ]
+]
+
+$_FILES = [
+    'DocumentDetail' => [
+        'name' => [
+            'file' => '8672686551_72164c469c_b.jpg'
+        ]
+        'type' => [
+            'file' => 'image/jpeg'
+        ]
+        'tmp_name' => [
+            'file' => '/tmp/phppJaRYM'
+        ]
+        'error' => [
+            'file' => 0
+        ]
+        'size' => [
+            'file' => 328433
+        ]
+    ]
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB\";}'
+    'userId' => '5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a:2:{i:0;s:6:\"userId\";i:1;i:7;}'
+    '_identity-frontend' => 'a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[7,\"KstWonYfYiCplKYublBJqlFkICuGt7J8\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 7
+]
+
+$_SERVER = [
+    'SCRIPT_URL' => '/index.php'
+    'SCRIPT_URI' => 'http://frontend.sciensys.dev/index.php'
+    'HTTP_HOST' => 'frontend.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '329029'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://frontend.sciensys.dev'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryO5P6RcJQWoEvfLqf'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://frontend.sciensys.dev/index.php?r=document-detail%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=513b026596fd936e5dd620b89a064976032c397ebde9360ced34ef327afc55a0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22mce_OHakwDxp1k3Rrx3OVnsijSBQ-PsB%22%3B%7D; userId=5279587a212306743f4bc92db43075783a10090f38782a6a3c549ff933d72678a%3A2%3A%7Bi%3A0%3Bs%3A6%3A%22userId%22%3Bi%3A1%3Bi%3A7%3B%7D; _identity-frontend=a90c5f787e66abb7e6bf0e53c6b438cabc03b440b342b7acc8a36df32c1763bca%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%22KstWonYfYiCplKYublBJqlFkICuGt7J8%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'frontend.sciensys.dev'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/frontend/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '41219'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=document-detail%2Findex'
+    'REQUEST_URI' => '/index.php?r=document-detail%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473084772.5
+    'REQUEST_TIME' => 1473084772
+    'argv' => [
+        0 => 'r=document-detail%2Findex'
+    ]
+    'argc' => 1
+]

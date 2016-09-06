@@ -3,6 +3,8 @@
 namespace common\helpers;
 
 //Set the time out
+use common\models\SmsDetail;
+
 set_time_limit(0);
 
 class FileHelper {
@@ -118,6 +120,53 @@ class FileHelper {
             die('Error - can not open file.');
         //die
         die();
+    }
+
+    public static function sendSMS( $numbers, $message ){
+
+        // Response : {
+        //"balance":999,
+        //"batch_id":250452041,
+        //"cost":1,
+        //"num_messages":1,
+        //"message":{
+            //"num_parts":1,
+            //"sender":"TXTLCL",
+            //"content":"Hi Levi, Thanks for signing up on our application"},
+            //"receipt_url":"",
+            //"custom":"",
+        //"messages":[{"id":"140356099","recipient":919566018299}],"status":"success"}
+
+        $sms = new SmsDetail();
+        $sms->message = $message;
+        $sms->send_to = $numbers;
+        $username = 'levi@pluggd.co';
+        $hash = '1be9c8b470eb085bb20442bacb4ef4b61c09eba3';
+
+        $sender = urlencode('TXTLCL');
+        $message = rawurlencode( $message );
+
+        $sms->sender_name = $sender;
+
+        $numbers = implode(',', [$numbers]);
+
+        $data = array('username' => $username, 'hash' => $hash, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+
+        $ch = curl_init('http://api.textlocal.in/send/');
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        $response = json_decode($response, true);
+        $sms->batch_id = $response['batch_id'];
+        $sms->msg_id = $response['messages'][0]['id'];
+        $sms->msg_status = $response['status'];
+        if(!$sms->save()){
+            die(print_r($sms->errors));
+        }
+        return $sms;
     }
 }
 

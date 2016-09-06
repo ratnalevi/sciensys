@@ -42,7 +42,7 @@ class DocumentDetailSearch extends DocumentDetail
     public function search($params)
     {
         $query = DocumentDetail::find();
-        $query->andWhere(['user_id' => Yii::$app->user->id]);
+        $query->andWhere(['user_id' => Yii::$app->user->id])->indexBy('doc_type_id');
 
         // add conditions that should always apply here
 

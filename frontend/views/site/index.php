@@ -50,7 +50,6 @@ $this->title = 'Welcome to ScienSYS';
             </div>
             <p>
                 <?= Html::a('View', ['/document-detail/index'], ['class' => 'btn btn-xs btn-default pull-right']) ?>
-                <?= Html::a('Upload', ['/document-detail/upload'], ['class' => 'btn btn-xs btn-default pull-right']) ?>
             </p>
         </div>
     </div>

@@ -4,15 +4,16 @@ use yii\helpers\Url;
 use kartik\detail\DetailView;
 
 /* @var $this yii\web\View */
+/* @var $model \common\models\DocumentDetail*/
 
 ?>
 
     <?php
     $attributes = [
         [
-            'attribute'=>'name',
-            'label'=>'Uploaded by',
-            'value' => $model->user->username,
+            'attribute'=>'doc_type_id',
+            'label'=>'Document Type',
+            'value' => $model->docType->name,
             'displayOnly' => true,
         ],
         [
@@ -55,10 +56,17 @@ use kartik\detail\DetailView;
            'format'=>'raw',
            'value'=>'<span class="text-justify"><em><a href="' . $model->file_url . '" target="_blank"> Download</a></em></span>',
            'displayOnly' => true,
-       ]
+       ],
+        [
+            'attribute'=>'name',
+            'label'=>'Uploaded by',
+            'value' => $model->user->username,
+            'displayOnly' => true,
+        ],
     ];
 
-    echo DetailView::widget([
+?>
+    <?= DetailView::widget([
         'model' => $model,
         'attributes' => $attributes,
         'condensed'=>true,

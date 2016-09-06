@@ -74,10 +74,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'heading'=>'Document',
             'type'=> $model->status == 10 ? DetailView::TYPE_PRIMARY : DetailView::TYPE_DANGER ,
         ],
-        'buttons1' => '{delete}',
-        'deleteOptions'=>[ // your ajax delete parameters
-            'params' => ['id' => $model->id, 'kvdelete'=>true],
-        ],
+        'buttons1' => '',
         'container' => ['id'=>'kv-demo'],
         'formOptions' => ['action' => Url::current(['/document-detail/index' => 'kv-demo'])] // your action to delete
     ]);

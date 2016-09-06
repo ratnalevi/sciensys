@@ -96,6 +96,6 @@ class UserDetail extends \yii\db\ActiveRecord
     }
 
     public function getFullName(){
-        return join(',' , [$this->first_name, $this->middle_name, $this->last_name]);
+        return join(' ' , [ucfirst( $this->first_name ), ucfirst( $this->middle_name ), ucfirst( $this->last_name ) ]);
     }
 }

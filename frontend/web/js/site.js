@@ -1,6 +1,6 @@
 
 var latestNotificationTime = 0;
-var notificationInterval = 15000;
+var notificationInterval = 1000;
 
 function readCookie(name, type) {
 
@@ -133,8 +133,30 @@ function updateNotifications(){
         );
 }
 
-$(document).ready(function(){
+function loadModal( button ){
+
+    var docUploadID = $('#doc_upload_type_id');
+
     $(".document-upload-form")[0].reset();
+
+    var str = button.id;
+    var parts = String(str).split('-');
+    var id = Number( parts[0]);
+    var name = parts[1];
+    var divModal = $('#doc_upload');
+
+    docUploadID.val(id);
+
+    divModal.modal('show');
+    divModal.modal({
+        backdrop: 'static',
+        keyboard: false
+    })
+
+
+}
+
+$(document).ready(function(){
     getNotificationList();
 
     $('.notifications-menu').on('click', function(){

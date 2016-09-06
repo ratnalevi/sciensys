@@ -34,43 +34,12 @@ class DocumentDetailController extends Controller
         ];
     }
 
-    public function sendSMS( $numbers, $message ){
-
-        $username = 'levi@pluggd.co';
-        $hash = '1be9c8b470eb085bb20442bacb4ef4b61c09eba3';
-
-        $sender = urlencode('TXTLCL');
-        $message = rawurlencode( $message );
-
-        $numbers = implode(',', $numbers);
-
-        $data = array('username' => $username, 'hash' => $hash, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
-
-        $ch = curl_init('http://api.textlocal.in/send/');
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $response = curl_exec($ch);
-        curl_close($ch);
-
-        return $response;
-    }
-
     /**
      * Lists all DocumentDetail models.
      * @return mixed
      */
     public function actionIndex()
     {
-
-        /*
-         * Code to send sms using TextLocal
-         *
-        $message = 'Hi Levi, Thanks for signing up on our application';
-        $contacts = [9566018299];
-        $smsResponse = $this->sendSMS($contacts, $message);
-        */
-
         $searchModel = new DocumentDetailSearch();
         $model = new DocumentDetail();
 
@@ -81,6 +50,8 @@ class DocumentDetailController extends Controller
             $userDetail = UserDetail::find()->andWhere(['user_id' => $model->user_id])->one();
 
             $model->status = $params['status'] == 1 ? 10 : 0;
+            $model->updated_at = time();
+
             $verification = $params['status'] == 1 ? 'approved' : 'not approved';
 
             if (!$model->save()) {
@@ -89,7 +60,7 @@ class DocumentDetailController extends Controller
 
             // Put a notification
 
-            $message = '<b>' . $model->name . '</b> has been ' . $verification . ' by <b>Admin</b>. Please review and proceed';
+            $message = '<b>' . $model->docType->name . '</b> has been ' . $verification . ' by <b>Admin</b>. Please review and proceed';
 
             $notification = new Notification();
             $notification->from_user = Yii::$app->user->id;
@@ -102,12 +73,9 @@ class DocumentDetailController extends Controller
 
             // send a message to user who uploaded the document
 
-            /*
-            if( $userDetail !== null && $userDetail->mobile === '' ) {
-                $numbers = $userDetail->mobile;
-                $smsResponse = $this->sendSMS($numbers, $message );
+            if( $userDetail !== null && $userDetail->mobile !== '' ) {
+                FileHelper::sendSMS($userDetail->mobile, $message );
             }
-            */
 
             if( !$notification->save() ){
                 Yii::$app->session->setFlash('kv-detail-error', 'Updated successfully, but notification failed');
@@ -153,7 +121,7 @@ class DocumentDetailController extends Controller
 
             // Put a notification
 
-            $message = '<b>' . $model->name . '</b> has been ' . $verification . ' by <b>Admin</b>. Please review and proceed';
+            $message = '<b>' . $model->docType->name . '</b> has been ' . $verification . ' by <b>Admin</b>. Please review and proceed';
 
             $notification = new Notification();
             $notification->from_user = Yii::$app->user->id;
@@ -166,12 +134,11 @@ class DocumentDetailController extends Controller
 
             // send a message to user who uploaded the document
 
-            /*
+
             if( $userDetail !== null && $userDetail->mobile === '' ) {
                 $numbers = $userDetail->mobile;
-                $smsResponse = $this->sendSMS($numbers, $message );
+                FileHelper::sendSMS($numbers, $message );
             }
-            */
 
             if( !$notification->save() ){
                 Yii::$app->session->setFlash('kv-detail-error', 'Updated successfully, but notification failed');
