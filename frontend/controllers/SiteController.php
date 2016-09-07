@@ -114,13 +114,14 @@ class SiteController extends Controller
     /**
      * Returns notifications for the user if any
      * @param $userId
-     * @return Notification
+     * @return Notification[]
      */
 
     public function actionGetNotifications( $userId ){
         Yii::$app->response->format = Response::FORMAT_JSON;
-        $notifications = Notification::find()->andWhere(['to_user' => $userId ])->andWhere(['is_read' => 0])->limit(15)->orderBy(['created_at' => SORT_DESC ])->all();
-        return ArrayHelper::toArray($notifications);
+        $newNotifications = Notification::find()->andWhere(['to_user' => $userId ])->andWhere(['is_read' => 0])->limit(10)->orderBy(['created_at' => SORT_DESC ])->all();
+        $oldNotifications = Notification::find()->andWhere(['to_user' => $userId ])->andWhere(['is_read' => 1])->limit(10)->orderBy(['created_at' => SORT_DESC ])->all();
+        return [ ArrayHelper::toArray($newNotifications) , $oldNotifications ] ;
     }
 
     /**

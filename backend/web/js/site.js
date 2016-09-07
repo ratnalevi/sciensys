@@ -1,6 +1,7 @@
 
 var latestNotificationTime = 0;
-var notificationInterval = 15000;
+var notificationInterval = 2000;
+var notificationClearInterval = 1000;
 
 function readCookie(name, type) {
 
@@ -57,15 +58,19 @@ function getNotificationList() {
         console.log('User details not found');
         return;
     }
-        
+
+    var notificationLoading = document.getElementsByClassName("notifications-loading");
+
     $.get("index.php?r=site/get-notifications&userId=" + userId)
 
-        .done(function (notifications) {
+        .done(function (notifications_all) {
 
                 var nTitle = document.getElementsByClassName("notification-header");
                 var nCount = document.getElementsByClassName("notification-count");
                 var nList = document.getElementsByClassName("notification-list");
                 var nFooter = document.getElementsByClassName("notification-footer");
+
+                nList[0].innerHTML = '';
 
                 if (nTitle == null || typeof nTitle == 'undefined') {
                     return;
@@ -77,31 +82,42 @@ function getNotificationList() {
                     return;
                 }
 
-                var notifCount = notifications.length ;
-                if( notifCount == 0 ){
-                    nTitle[0].innerHTML = 'You have no new notifications';
+                if( notifications_all[0].length + notifications_all[1].length == 0 ){
+                    nTitle[0].innerHTML = 'You have no notifications';
                     nFooter[0].setAttribute('style', 'display:none');
+                    return;
                 }
-                else {
-                    latestNotificationTime = notifications[0].created_at;
-                    nFooter[0].setAttribute('style', 'display:block');
-                    nCount[0].innerHTML = notifCount;
-                    nTitle[0].innerHTML = 'You have ' + notifCount + ' new notifications';
 
-                    for (var k = 0; k < notifCount; k++) {
+                for( var j = 0; j < 2; j++ ){
+                    var notifications = notifications_all[j];
+                    var notifCount = notifications.length ;
+                    if( notifCount != 0 ){
 
-                        var li = document.createElement("li");
-                        var a = document.createElement("a");
-                        a.href = 'index.php?r=document-detail/view&id=' + notifications[k].document_id;
-                        a.innerHTML = notifications[k].message;
+                        nFooter[0].setAttribute('style', 'display:block');
+                        if( j == 0 ) {
+                            nCount[0].innerHTML = notifCount;
+                            nTitle[0].innerHTML = 'You have ' + notifCount + ' new notifications';
+                            latestNotificationTime = notifications[0].created_at;
+                        }
 
-                        var i = document.createElement("i");
-                        i.className = 'fa fa-shopping-cart text-green';
-                        i.setAttribute('class', 'fa fa-shopping-cart text-green');
+                        for (var k = 0; k < notifCount; k++) {
 
-                        a.appendChild(i);
-                        li.appendChild(a);
-                        nList[0].appendChild(li);
+                            var li = document.createElement("li");
+                            if( j == 0 ){
+                                li.style.cssText = 'background: grey;';
+                            }
+                            var a = document.createElement("a");
+                            a.href = 'index.php?r=document-detail/index';
+                            a.innerHTML = notifications[k].message;
+
+                            var i = document.createElement("i");
+                            i.className = 'fa fa-shopping-cart text-green';
+                            i.setAttribute('class', 'fa fa-shopping-cart text-green');
+
+                            a.appendChild(i);
+                            li.appendChild(a);
+                            nList[0].appendChild( li );
+                        }
                     }
                 }
             }
@@ -132,14 +148,44 @@ function updateNotifications(){
         );
 }
 
+function loadModal( button ){
+
+    var docUploadID = $('#doc_upload_type_id');
+
+    $(".document-upload-form")[0].reset();
+
+    var str = button.id;
+    var parts = String(str).split('-');
+    var id = Number( parts[0]);
+    var name = parts[1];
+    var divModal = $('#doc_upload');
+
+    docUploadID.val(id);
+
+    divModal.modal('show');
+    divModal.modal({
+        backdrop: 'static',
+        keyboard: false
+    })
+
+
+}
+
 $(document).ready(function(){
+
+    var mask = document.getElementById('bg_mask');
+    var layer = document.getElementById('frontlayer');
+    if( mask !== null && typeof mask != 'undefined' ) {
+        mask.style.visibility = 'visible';
+        layer.style.visibility='visible';
+    }
 
     getNotificationList();
 
     $('.notifications-menu').on('click', function(){
 
         if( latestNotificationTime > 0 ) {
-            setTimeout("updateNotifications()", notificationInterval/5);
+           // setTimeout("updateNotifications()", notificationClearInterval );
         }
     });
 });

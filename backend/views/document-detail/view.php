@@ -1,90 +1,102 @@
 <?php
 
-use yii\helpers\Url;
-use kartik\detail\DetailView;
+use kartik\widgets\ActiveForm;
+use kartik\widgets\ColorInput;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\DocumentDetail */
+/* @var $searchModel backend\models\DocumentDetailSearch */
+/* @var $model \common\models\DocumentDetail */
+/* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Document Details', 'url' => ['index']];
+$this->title = 'Documents';
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
-<div class="document-detail-view">
+<div class="document-index">
+
     <?php
-    $attributes = [
-        [
-            'attribute'=>'name',
-            'label'=>'Uploaded by',
-            'value' => $model->user->username,
-            'displayOnly' => true,
+
+    $form = ActiveForm::begin();
+
+    echo $form->errorSummary($model);
+
+    $gridColumns = [
+       [
+            'header'=>'Client ID',
+            'value' => function( $model ){
+                return $model->user->username;
+            },
+            'vAlign'=>'middle',
+            'hAlign'=>'left',
+            'width' => '20%',
+            'pageSummary'=>true
         ],
         [
-            'attribute'=>'name',
-            'label'=>'Document Name',
-            'displayOnly' => true,
+            'header'=>'Doc Type',
+            'value' => function( $model ){
+                return $model->docType->name;
+            },
+            'vAlign'=>'middle',
+            'hAlign'=>'left',
+            'width' => '20%',
+            'pageSummary'=>true
         ],
         [
-            'attribute'=>'file_type',
-            'label'=>'File Type',
-            'value' => $model->file_type,
-            'displayOnly' => true,
+            'header'=>'File Name',
+            'value' => function( $model ){
+                return $model->name;
+            },
+            'vAlign'=>'middle',
+            'hAlign'=>'left',
+            'width' => '20%',
+            'pageSummary'=>true
         ],
         [
-            'attribute'=>'file_size',
-            'label'=>'File Size',
-            'value' => ( $model->file_size / 1024 ) < 1024 ? number_format((float)$model->file_size / 1024 , 2, '.', '') . ' KB' : number_format((float)$model->file_size / ( 1024 * 1024 ) , 2, '.', '') . ' MB' ,
-            'displayOnly' => true,
-        ],
-        [
-            'attribute'=>'status',
-            'label'=>'Verification Status',
-            'format'=>'raw',
-            'value'=> $model->status ? '<span class="label label-success">Verified</span>' : '<span class="label label-danger">Not Verified</span>',
-            'type'=>DetailView::INPUT_SWITCH,
-            'widgetOptions' => [
-                'pluginOptions' => [
-                    'onText' => 'Yes',
-                    'offText' => 'No',
-                ]
+            'header' => 'Perform Action',
+            'class'=>'kartik\grid\EditableColumn',
+            'attribute' => 'status',
+            'editableOptions'=>[
+                'name'=>'status',
+                'value' => 0,
+                'asPopover' => false,
+                'header' => 'Status',
+                'inputType' => \kartik\editable\Editable::INPUT_DROPDOWN_LIST,
+                'data' => [0 => 'Review', 10 => 'Accept', -10 => 'Reject'],
+                'options' => ['class'=>'form-control', 'prompt'=>'Select status...'],
+                'displayValueConfig'=> [
+                    '0' => 'Review',
+                    '10' => '<i class="glyphicon glyphicon-thumbs-up"></i> Accepted',
+                    '-10' => '<i class="glyphicon glyphicon-thumbs-down"></i> Rejected',
+                ],
             ],
-            'valueColOptions'=>['style'=>'width:30%']
+            'hAlign'=>'right',
+            'vAlign'=>'middle',
+            'width'=>'10%',
+            'pageSummary'=>true
         ],
         [
-            'attribute'=>'id',
-            'label' => 'ID',
-            'format'=>'raw',
-            'type' => DetailView::INPUT_DROPDOWN_LIST,
-            'items' => [ $model->id => $model->id ],
-            'value'=>'<span class="text-justify"><em>' . $model->id . '</em></span>',
+            'class' => 'kartik\grid\ActionColumn',
+            'viewOptions' =>  ['class' => 'hide'],
+            'deleteOptions' =>  ['class' => 'hide'],
+            'buttons' => [
+                'update' => function ($url, $model) {
+                    return \yii\helpers\Html::a('Download', $model->file_url, [
+                        'title' => 'Download',
+                        'aria-label' => 'Download',
+                        'data-pjax' => '0',
+                        'class' => 'btn btn-md btn-info',
+                    ]);
+                }
+            ],
+
         ],
-        [
-            'attribute'=>'created_at',
-            'label' => '',
-            'format'=>'raw',
-            'value'=>'<span class="text-justify"><em><a href="' . $model->file_url . '" target="_blank"> Download</a></em></span>',
-            'displayOnly' => true,
-        ]
     ];
 
-    echo DetailView::widget([
-        'model' => $model,
-        'attributes' => $attributes,
-        'condensed'=>true,
-        'hover'=>true,
-        'bordered' => true,
-        'striped' => true,
-        'responsive' => true,
-        'mode'=>DetailView::MODE_VIEW,
-        'panel'=>[
-            'heading'=>'Document',
-            'type'=> $model->status == 10 ? DetailView::TYPE_PRIMARY : DetailView::TYPE_DANGER ,
-        ],
-        'buttons1' => '{update}',
-        'container' => ['id'=>'kv-demo'],
-        'formOptions' => ['action' => Url::current(['/document-detail/index' => 'kv-demo'])] // your action to delete
+    echo \kartik\grid\GridView::widget([
+        'dataProvider'=>$dataProvider,
+        'columns'=>$gridColumns
     ]);
 
-    ?>
 
+    ?>
 </div>

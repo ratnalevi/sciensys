@@ -14,6 +14,10 @@ return [
     'modules' => [
         'gridview' =>  [
             'class' => '\kartik\grid\Module'
+        ],
+        'debug' => [
+            'class' => 'yii\debug\Module',
+            'allowedIPs' => []
         ]
     ],
     'components' => [

@@ -40,27 +40,29 @@ class DocumentDetailController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new DocumentDetailSearch();
         $model = new DocumentDetail();
+        $searchModel = new DocumentDetailSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        if( Yii::$app->request->isPost ){
-            $params = Yii::$app->request->post('DocumentDetail');
-
-            $model = DocumentDetail::find()->andWhere(['id' => $params['id']])->one();
+        if (Yii::$app->request->post('hasEditable')) {
+            $documentId = Yii::$app->request->post('editableKey');
+            $model = DocumentDetail::find()->andWhere(['id' => $documentId])->one();
             $userDetail = UserDetail::find()->andWhere(['user_id' => $model->user_id])->one();
 
-            $model->status = $params['status'] == 1 ? 10 : 0;
-            $model->updated_at = time();
+            $doc = current($_POST['DocumentDetail']);
 
-            $verification = $params['status'] == 1 ? 'approved' : 'not approved';
+            $model->status = $doc['status'];
 
             if (!$model->save()) {
                 Yii::$app->session->setFlash('kv-detail-error', 'Updation Failed');
             }
 
-            // Put a notification
+            $verification = $model->status / 10 == 1 ? 'approved' : 'not approved';
+            $message = '<b>' . $model->docType->name . '</b> report has been ' . $verification . ' by <b>Admin</b>. Please review and proceed';
 
-            $message = '<b>' . $model->docType->name . '</b> has been ' . $verification . ' by <b>Admin</b>. Please review and proceed';
+            if( $userDetail !== null && $userDetail->mobile !== '' ) {
+                FileHelper::sendSMS($userDetail->mobile, $message );
+            }
 
             $notification = new Notification();
             $notification->from_user = Yii::$app->user->id;
@@ -73,21 +75,25 @@ class DocumentDetailController extends Controller
 
             // send a message to user who uploaded the document
 
-            if( $userDetail !== null && $userDetail->mobile !== '' ) {
-                FileHelper::sendSMS($userDetail->mobile, $message );
-            }
-
             if( !$notification->save() ){
                 Yii::$app->session->setFlash('kv-detail-error', 'Updated successfully, but notification failed');
             }
-        }
 
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+            $output = '';
+            if (isset( $doc['status'])) {
+                $output = $doc['status'];
+            }
+
+            $out = Json::encode(['output'=>$output, 'message'=>'']);
+
+            echo $out;
+            return;
+        }
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'model' => $model
+            'model' => $model,
         ]);
     }
 
@@ -101,52 +107,38 @@ class DocumentDetailController extends Controller
 
     /**
      * Displays a single DocumentDetail model.
-     * @param integer $id
      * @return mixed
      */
     public function actionView($id)
     {
-        if( Yii::$app->request->isPost ){
-            $params = Yii::$app->request->post('DocumentDetail');
+        $model = new DocumentDetail();
+        $searchModel = new DocumentDetailSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-            $model = DocumentDetail::find()->andWhere(['id' => $params['id']])->one();
-            $userDetail = UserDetail::find()->andWhere(['user_id' => $model->user_id])->one();
+        if (Yii::$app->request->post('hasEditable')) {
+            $documentId = Yii::$app->request->post('editableKey');
+            $model = DocumentDetail::find()->andWhere(['id' => $documentId])->one();
 
-            $model->status = $params['status'] == 1 ? 10 : 0;
-            $verification = $params['status'] == 1 ? 'approved' : 'not approved';
+            $doc = current($_POST['DocumentDetail']);
 
-            if (!$model->save()) {
-                Yii::$app->session->setFlash('kv-detail-error', 'Updation Failed');
+            $model->status = $doc['status'];
+
+            $model->save();
+            $output = '';
+            if (isset( $doc['status'])) {
+                $output = $doc['status'];
             }
 
-            // Put a notification
+            $out = Json::encode(['output'=>$output, 'message'=>'']);
 
-            $message = '<b>' . $model->docType->name . '</b> has been ' . $verification . ' by <b>Admin</b>. Please review and proceed';
-
-            $notification = new Notification();
-            $notification->from_user = Yii::$app->user->id;
-            $notification->to_user = $model->user_id;
-            $notification->message = $message;
-            $notification->document_id = $model->id;
-            $notification->is_read = Notification::UNREAD;
-            $notification->created_at = time();
-            $notification->read_at = 0;
-
-            // send a message to user who uploaded the document
-
-
-            if( $userDetail !== null && $userDetail->mobile === '' ) {
-                $numbers = $userDetail->mobile;
-                FileHelper::sendSMS($numbers, $message );
-            }
-
-            if( !$notification->save() ){
-                Yii::$app->session->setFlash('kv-detail-error', 'Updated successfully, but notification failed');
-            }
+            echo $out;
+            return;
         }
 
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+            'model' => $model,
         ]);
     }
 

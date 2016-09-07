@@ -20,7 +20,7 @@
                 'items' => [
                     ['label' => 'Menu ', 'options' => ['class' => 'header']],
                     ['label' => 'Home', 'icon' => 'fa fa-home', 'url' => ['/site/index' ]],
-                    ['label' => 'Documents', 'icon' => 'fa fa-cloud-upload', 'url' => ['/document-detail/index']]
+                    ['label' => 'Ongoing', 'icon' => 'fa fa-cloud-upload', 'url' => ['/document-detail/index']]
                 ],
             ]
         ) ?>

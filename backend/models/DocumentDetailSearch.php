@@ -17,7 +17,7 @@ class DocumentDetailSearch extends DocumentDetail
     public function rules()
     {
         return [
-            [['id', 'user_id', 'file_size', 'created_at', 'updated_at'], 'integer'],
+            [['id', 'user_id', 'file_size', 'created_at', 'updated_at', 'status'], 'integer'],
             [['name', 'file_url', 'file_type'], 'safe'],
         ];
     }

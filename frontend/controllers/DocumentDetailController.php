@@ -65,7 +65,7 @@ class DocumentDetailController extends Controller
 
                     $userDetail = UserDetail::find()->andWhere(['user_id' => $model->user_id])->one();
 
-                    $message = '<b>' . $model->docType->name . '</b> has been uploaded by ' . $userDetail->getFullName() . " Review required";
+                    $message = '<b>' . $model->docType->name . '</b> report has been uploaded by ' . $userDetail->getFullName() . " Review required";
 
                     $admin = User::find()->andWhere(['type' => User::ROOT_USER ])->one();
 
