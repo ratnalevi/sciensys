@@ -132,15 +132,23 @@ $this->params['breadcrumbs'][] = $this->title;
                     $adminStatus = $docs[$docTypes[$i]->id ]->status == \common\models\DocumentDetail::FILE_ACTIVE ? 'Approved by admin' : 'Under review';
                 }
 
+                $downloadUrl = '#';
+                $switchValue = 0;
+
+                if( isset( $docs ) && isset( $docs[$docTypes[$i]->id ]) ){
+                    $downloadUrl = $docs[ $docTypes[$i]->id ]->file_url;
+                    $switchValue = ( $docs[$docTypes[$i]->id ]->status == \common\models\DocumentDetail::FILE_ACTIVE );
+                }
+
                 echo '<tr>';
                 echo '<td class="tg-hjma">' . 'Step : ' . ( $i + 1 ) . ' - ' . $docTypes[$i]->name . '</td>';
                 echo '<td class="tg-hjma">' . $userStatus . '</td>';
                 echo '<td class="tg-hjma">' . $adminStatus . '</td>';
-                echo '<td class="tg-hjma">' . '<a href="' . isset( $docs ) && isset( $docs[$docTypes[$i]->id ]) ? $docs[ $docTypes[$i]->id ]->file_url : "#" . '"><button type="button"  class="btn btn-sm btn-success" ' . $downloadDisable . '>Download</button></a>' . '</td>';
+                echo '<td class="tg-hjma">' . '<a href="' . $downloadUrl . '"><button type="button"  class="btn btn-sm btn-success" ' . $downloadDisable . '>Download</button></a>' . '</td>';
                 echo '<td class="tg-hjma">' . '<button type="button"  class="btn btn-sm btn-info" id="' . $docTypes[$i]->id . '-' . $docTypes[$i]->name . '"'. $uploadDisable. ' onclick="loadModal(this)">Upload</button>' . '</td>';
                 echo '<td class="tg-4s4s">' . \kartik\widgets\SwitchInput::widget([
                         'name' => 'status',
-                        'value' => ( $docs[$docTypes[$i]->id ]->status == \common\models\DocumentDetail::FILE_ACTIVE ),
+                        'value' => $switchValue,
                         'disabled' => true,
                         'pluginOptions' => [
                             'size' => 'large',
