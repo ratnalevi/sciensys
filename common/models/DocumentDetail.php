@@ -140,8 +140,9 @@ class DocumentDetail extends \yii\db\ActiveRecord
         $savedName .= '.' . $ext;
         $path = Yii::$app->basePath . '/web/uploads/' .$savedName;
 
-        $url = $this->url();
-        $url = str_replace('index', 'download', $url);
+        $url = explode('?', $this->url() );
+
+        $url = $url[0] . '?' . str_replace('index', 'download', $url[1]);
         $url .= '&file_name=' . $savedName;
 
         $this->name = $uploadedFile->name;
