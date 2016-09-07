@@ -160,8 +160,8 @@ class FileHelper {
         curl_close($ch);
 
         $response = json_decode($response, true);
-        $sms->batch_id = $response['batch_id'];
-        $sms->msg_id = $response['messages'][0]['id'];
+        $sms->batch_id = isset( $response['batch_id'] ) ? $response['batch_id'] : 0;
+        $sms->msg_id = isset( $response['messages'] ) && isset( $response['messages'][0] ) && isset( $response['messages'][0]['id'] ) ? $response['messages'][0]['id'] : 0;
         $sms->msg_status = $response['status'];
         if(!$sms->save()){
             die(print_r($sms->errors));
