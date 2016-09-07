@@ -136,7 +136,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 echo '<td class="tg-hjma">' . 'Step : ' . ( $i + 1 ) . ' - ' . $docTypes[$i]->name . '</td>';
                 echo '<td class="tg-hjma">' . $userStatus . '</td>';
                 echo '<td class="tg-hjma">' . $adminStatus . '</td>';
-                echo '<td class="tg-hjma">' . '<a href="' . $docs[ $docTypes[$i]->id ]->file_url . '"><button type="button"  class="btn btn-sm btn-success" ' . $downloadDisable . '>Download</button></a>' . '</td>';
+                echo '<td class="tg-hjma">' . '<a href="' . isset( $docs[$docTypes[$i]->id ]) ? $docs[ $docTypes[$i]->id ]->file_url : "#" . '"><button type="button"  class="btn btn-sm btn-success" ' . $downloadDisable . '>Download</button></a>' . '</td>';
                 echo '<td class="tg-hjma">' . '<button type="button"  class="btn btn-sm btn-info" id="' . $docTypes[$i]->id . '-' . $docTypes[$i]->name . '"'. $uploadDisable. ' onclick="loadModal(this)">Upload</button>' . '</td>';
                 echo '<td class="tg-4s4s">' . \kartik\widgets\SwitchInput::widget([
                         'name' => 'status',
