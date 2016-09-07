@@ -106,6 +106,8 @@ class DocumentDetailController extends Controller
             $model = new DocumentDetail();
         }
 
+        $id = Yii::$app->user->id;
+
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         $business = BusinessDetail::find()->andWhere(['user_id' => $id])->one();

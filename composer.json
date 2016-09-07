@@ -15,6 +15,7 @@
   "minimum-stability": "stable",
   "require": {
     "kartik-v/yii2-mpdf": "*",
+    "kartik-v/yii2-editable": "*",
     "kartik-v/yii2-builder": "@dev",
     "kartik-v/yii2-krajee-base": "~1.7",
     "kartik-v/yii2-helpers": "~1.3",

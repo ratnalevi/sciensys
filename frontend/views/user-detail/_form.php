@@ -15,7 +15,11 @@ use kartik\builder\FormGrid;
     <?php
 
     $resetButton = $model->isNewRecord  ? Html::resetButton('Reset', ['class'=>'btn btn-default']) : '';
-    $form = ActiveForm::begin(['type'=>ActiveForm::TYPE_VERTICAL]);
+    $action = $model->isNewRecord ? 'create' : 'update-me';
+    $form = ActiveForm::begin([
+        'type'=>ActiveForm::TYPE_VERTICAL,
+        'action' =>[ $action ],
+    ]);
 
     echo $form->errorSummary($model);
 

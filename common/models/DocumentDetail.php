@@ -46,7 +46,7 @@ class DocumentDetail extends \yii\db\ActiveRecord
     {
         return [
             [['file'], 'safe'],
-            [['file'], 'file', 'extensions'=>'jpg, gif, png'],
+            [['file'], 'file', 'extensions'=>'docx, doc, pdf'],
 
             [['user_id', 'name', 'file_url', 'file_type', 'file_size','doc_type_id', 'created_at', 'updated_at'], 'required'],
             [['user_id', 'file_size', 'status', 'created_at', 'updated_at'], 'integer'],
@@ -134,11 +134,15 @@ class DocumentDetail extends \yii\db\ActiveRecord
             return $this ;
         }
 
-        $path = Yii::$app->basePath . '/web/uploads/' . $uploadedFile->name;
+        $name = explode('.', $uploadedFile->name );
+        $ext = $name[1];
+        $savedName = Yii::$app->security->generateRandomString(10);
+        $savedName .= '.' . $ext;
+        $path = Yii::$app->basePath . '/web/uploads/' .$savedName;
 
         $url = $this->url();
         $url = str_replace('index', 'download', $url);
-        $url .= '&file_name=' . $uploadedFile->name;
+        $url .= '&file_name=' . $savedName;
 
         $this->name = $uploadedFile->name;
         $this->file_url = $url;

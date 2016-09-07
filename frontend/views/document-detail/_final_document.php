@@ -21,9 +21,9 @@ $this->title = ""
             </tr>
             <tr>
                 <td class="tg-qj8c">Type of Business</td>
-                <td class="tg-yw4l"><?= $business->type_of_business ?></td>
+                <td class="tg-yw4l"><?= $business->typeOfBusiness->name ?></td>
                 <td class="tg-qj8c">Form of Business</td>
-                <td class="tg-yw4l"><?= $business->form_of_business ?></td>
+                <td class="tg-yw4l"><?= $business->formOfBusiness->name ?></td>
             </tr>
             <tr>
                 <td class="tg-qj8c" rowspan="2">Address</td>

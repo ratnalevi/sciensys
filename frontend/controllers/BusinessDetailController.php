@@ -47,18 +47,9 @@ class BusinessDetailController extends Controller
             ]);
         }
 
-        $model = $this->findModel($id);
-
-        if( $model === null ){
-            return $this->render('view', [
-                'model' => new BusinessDetail(),
-            ]);
-        }
-        else {
-            return $this->render('view', [
-                'model' => $model,
-            ]);
-        }
+        return $this->render('view', [
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -83,32 +74,6 @@ class BusinessDetailController extends Controller
         ]);
     }
 
-    /**
-     * Updates an existing BusinessDetail model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionUpdate($id = 0 )
-    {
-        $model = $this->findModel($id);
-
-        if($model === null || $id == 0 ){
-            $model = new BusinessDetail();
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view-me']);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }
-    }
-
     public function actionUpdateMe( )
     {
         $id = Yii::$app->user->id;
@@ -121,7 +86,6 @@ class BusinessDetailController extends Controller
                 'model' => $model,
             ]);
         }
-
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view-me']);

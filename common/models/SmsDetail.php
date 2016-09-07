@@ -31,8 +31,9 @@ class SmsDetail extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['sender_name', 'send_to', 'message', 'batch_id', 'msg_id', 'msg_status'], 'required'],
-            [['send_to', 'batch_id', 'msg_id'], 'integer'],
+            [['sender_name', 'send_to', 'message', 'msg_status'], 'required'],
+            [['batch_id', 'msg_id'], 'integer'],
+            [['send_to'], 'string', 'max' => 15],
             [['sender_name'], 'string', 'max' => 64],
             [['message'], 'string', 'max' => 255],
             [['msg_status'], 'string', 'max' => 32],

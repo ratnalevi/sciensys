@@ -157,6 +157,14 @@ function loadModal( button ){
 }
 
 $(document).ready(function(){
+
+    var mask = document.getElementById('bg_mask');
+    var layer = document.getElementById('frontlayer');
+    if( mask !== null && typeof mask != 'undefined' ) {
+        mask.style.visibility = 'visible';
+        layer.style.visibility='visible';
+    }
+
     getNotificationList();
 
     $('.notifications-menu').on('click', function(){
