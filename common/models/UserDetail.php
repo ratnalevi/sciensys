@@ -5,33 +5,38 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "qs_user_detail".
+ * This is the model class for table "user_detail".
  *
  * @property integer $id
  * @property integer $user_id
  * @property string $first_name
  * @property string $middle_name
  * @property string $last_name
+ * @property string $company_name
+ * @property integer $form_of_business
+ * @property integer $type_of_business
  * @property string $country_code
- * @property integer $mobile
+ * @property string $mobile
  * @property string $dob
  * @property integer $gender
- * @property string $address1
- * @property string $address2
- * @property string $address3
- * @property integer $city_id
- * @property string $pincode
+ * @property string $address
+ * @property integer $pincode
  * @property integer $created_at
  * @property integer $updated_at
+ *
+ * @property FormOfBusiness $formOfBusiness
+ * @property TypeOfBusiness $typeOfBusiness
+ * @property User $user
  */
 class UserDetail extends \yii\db\ActiveRecord
 {
+    public $fullName = '';
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'qs_user_detail';
+        return 'user_detail';
     }
 
     /**
@@ -40,12 +45,15 @@ class UserDetail extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'first_name', 'middle_name', 'last_name', 'dob', 'address1', 'city_id', 'pincode'], 'required'],
-            [['user_id', 'mobile', 'gender', 'city_id', 'created_at', 'updated_at'], 'integer'],
+            [['user_id', 'first_name', 'middle_name', 'last_name', 'company_name', 'form_of_business', 'type_of_business', 'dob', 'address'], 'required'],
+            [['user_id', 'form_of_business', 'type_of_business', 'gender', 'pincode', 'created_at', 'updated_at'], 'integer'],
             [['first_name', 'middle_name', 'last_name'], 'string', 'max' => 32],
+            [['company_name', 'address'], 'string', 'max' => 64],
             [['country_code'], 'string', 'max' => 8],
-            [['dob', 'pincode'], 'string', 'max' => 16],
-            [['address1', 'address2', 'address3'], 'string', 'max' => 64],
+            [['mobile', 'dob'], 'string', 'max' => 16],
+            [['form_of_business'], 'exist', 'skipOnError' => true, 'targetClass' => FormOfBusiness::className(), 'targetAttribute' => ['form_of_business' => 'id']],
+            [['type_of_business'], 'exist', 'skipOnError' => true, 'targetClass' => TypeOfBusiness::className(), 'targetAttribute' => ['type_of_business' => 'id']],
+            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
         ];
     }
 
@@ -60,14 +68,14 @@ class UserDetail extends \yii\db\ActiveRecord
             'first_name' => 'First Name',
             'middle_name' => 'Middle Name',
             'last_name' => 'Last Name',
+            'company_name' => 'Company Name',
+            'form_of_business' => 'Form Of Business',
+            'type_of_business' => 'Type Of Business',
             'country_code' => 'Country Code',
             'mobile' => 'Mobile',
             'dob' => 'Dob',
             'gender' => 'Gender',
-            'address1' => 'Address1',
-            'address2' => 'Address2',
-            'address3' => 'Address3',
-            'city_id' => 'City ID',
+            'address' => 'Address',
             'pincode' => 'Pincode',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
@@ -75,27 +83,34 @@ class UserDetail extends \yii\db\ActiveRecord
     }
 
     /**
-     * @inheritdoc
-     * @return UserDetailQuery the active query used by this AR class.
+     * @return \yii\db\ActiveQuery
      */
-    public static function find()
+    public function getFormOfBusiness()
     {
-        return new UserDetailQuery(get_called_class());
+        return $this->hasOne(FormOfBusiness::className(), ['id' => 'form_of_business']);
     }
 
     /**
-     * @inheritdoc
-     * @return UserDetail based on ID
+     * @return \yii\db\ActiveQuery
      */
-    public static function findByUserId($id){
-        return UserDetail::find()->andWhere(['user_id' => $id])->one();
+    public function getTypeOfBusiness()
+    {
+        return $this->hasOne(TypeOfBusiness::className(), ['id' => 'type_of_business']);
     }
 
-    public function getCity(){
-        return City::find()->andWhere(['id' => $this->city_id])->one();
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUser()
+    {
+        return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
 
-    public function getFullName(){
-        return join(' ' , [ucfirst( $this->first_name ), ucfirst( $this->middle_name ), ucfirst( $this->last_name ) ]);
+    /**
+     * @return string
+     */
+    public function getFullName()
+    {
+        return join(' ', [ucfirst($this->first_name),ucfirst($this->middle_name),ucfirst($this->last_name)]);
     }
 }

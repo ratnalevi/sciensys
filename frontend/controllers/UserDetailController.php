@@ -4,7 +4,6 @@ namespace frontend\controllers;
 
 use Yii;
 use common\models\UserDetail;
-use frontend\models\UserDetailSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

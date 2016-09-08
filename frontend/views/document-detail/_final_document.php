@@ -17,49 +17,22 @@ $this->title = ""
             </tr>
             <tr>
                 <td class="tg-qj8c">Name of business</td>
-                <td class="tg-yw4l" colspan="3"><?= $business->name ?></td>
+                <td class="tg-yw4l" colspan="3"><?= $personal->company_name ?></td>
             </tr>
             <tr>
                 <td class="tg-qj8c">Type of Business</td>
-                <td class="tg-yw4l"><?= $business->typeOfBusiness->name ?></td>
+                <td class="tg-yw4l"><?= $personal->typeOfBusiness->name ?></td>
                 <td class="tg-qj8c">Form of Business</td>
-                <td class="tg-yw4l"><?= $business->formOfBusiness->name ?></td>
+                <td class="tg-yw4l"><?= $personal->formOfBusiness->name ?></td>
             </tr>
             <tr>
                 <td class="tg-qj8c" rowspan="2">Address</td>
-                <td class="tg-yw4l" colspan="3" rowspan="2"> <?= $business->address1?><br><?= $business->address2?><br><?= $business->address3 ?></td>
+                <td class="tg-yw4l" colspan="3" rowspan="2"> <?= $personal->address ?><br></td>
             </tr>
             <tr>
             </tr>
             <tr>
                 <td class="tg-vxmf" colspan="4" style="background-color:#ffffff;"></td>
-            </tr>
-            <tr>
-                <td class="tg-sbnk" colspan="4">Partner ID : 1</td>
-            </tr>
-            <tr>
-                <td class="tg-qj8c">Name</td>
-                <td class="tg-yw4l"><?= $business->owner1_name ?></td>
-                <td class="tg-qj8c">Contact</td>
-                <td class="tg-yw4l"><?= $business->owner1_contact ?></td>
-            </tr>
-            <tr>
-                <td class="tg-sbnk" colspan="4">Partner ID : 2</td>
-            </tr>
-            <tr>
-                <td class="tg-qj8c">Name</td>
-                <td class="tg-yw4l"><?= $business->owner2_name ?></td>
-                <td class="tg-qj8c">Contact</td>
-                <td class="tg-yw4l"><?= $business->owner2_contact ?></td>
-            </tr>
-            <tr>
-                <td class="tg-sbnk" colspan="4">Partner ID : 3</td>
-            </tr>
-            <tr>
-                <td class="tg-qj8c">Name</td>
-                <td class="tg-yw4l"><?= $business->owner3_name ?></td>
-                <td class="tg-qj8c">Contact</td>
-                <td class="tg-yw4l"><?= $business->owner3_contact ?></td>
             </tr>
             <tr>
                 <td class="tg-yw4l"></td>

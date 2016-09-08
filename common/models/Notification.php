@@ -5,7 +5,7 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "_notification".
+ * This is the model class for table "notification".
  *
  * @property integer $id
  * @property integer $from_user
@@ -22,14 +22,14 @@ use Yii;
  */
 class Notification extends \yii\db\ActiveRecord
 {
+    const READ = 1;
     const UNREAD = 0;
-    const READ = 10;
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'qs_notification';
+        return 'notification';
     }
 
     /**
@@ -86,19 +86,4 @@ class Notification extends \yii\db\ActiveRecord
     {
         return $this->hasOne(DocumentDetail::className(), ['id' => 'document_id']);
     }
-
-    /**
-     * @inheritdoc
-     * @return NotificationQuery the active query used by this AR class.
-     */
-    public static function find()
-    {
-        return new NotificationQuery(get_called_class());
-    }
-
-    public static function defaultOrder()
-    {
-        return ['created_at' => SORT_DESC];
-    }
-
 }

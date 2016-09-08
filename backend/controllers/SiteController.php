@@ -68,7 +68,6 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $count['user'] = User::find()->andWhere([ '!=', 'type', User::ROOT_USER ])->count();
-        $count['business'] = BusinessDetail::find()->count();
         $count['docs'] = DocumentDetail::find()->count();
         //$count['approved'] = BusinessDetail::find()->andWhere(['status' => 10 ])->count();
         return $this->render('index',[

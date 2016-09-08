@@ -1,0 +1,1389 @@
+2016-09-08 14:58:57 [127.0.0.1][-][-][error][ReflectionException] exception 'ReflectionException' with message 'Class api\modules\v1\Module does not exist' in /home/advanced/vendor/yiisoft/yii2/di/Container.php:422
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/di/Container.php(422): ReflectionClass->__construct('api\modules\v1\...')
+#1 /home/advanced/vendor/yiisoft/yii2/di/Container.php(362): yii\di\Container->getDependencies('api\modules\v1\...')
+#2 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('api\modules\v1\...', Array, Array)
+#3 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('api\modules\v1\...', Array, Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(353): yii\BaseYii::createObject(Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/base/Module.php(510): yii\base\Module->getModule('v1')
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#7 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#10 {main}
+2016-09-08 14:58:57 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'e30d20ab-dbf9-7f05-821f-fb1ecc9c3bb4'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '45944'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473326937.19
+    'REQUEST_TIME' => 1473326937
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:00:56 [127.0.0.1][-][-][error][ReflectionException] exception 'ReflectionException' with message 'Class api\modules\v1\Module does not exist' in /home/advanced/vendor/yiisoft/yii2/di/Container.php:422
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/di/Container.php(422): ReflectionClass->__construct('api\modules\v1\...')
+#1 /home/advanced/vendor/yiisoft/yii2/di/Container.php(362): yii\di\Container->getDependencies('api\modules\v1\...')
+#2 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('api\modules\v1\...', Array, Array)
+#3 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('api\modules\v1\...', Array, Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(353): yii\BaseYii::createObject(Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/base/Module.php(510): yii\base\Module->getModule('v1')
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#7 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#10 {main}
+2016-09-08 15:00:56 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'ff1070b2-6355-8907-39f3-a062b7e23c9e'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46011'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327056.52
+    'REQUEST_TIME' => 1473327056
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:01:29 [127.0.0.1][-][-][error][ReflectionException] exception 'ReflectionException' with message 'Class api\modules\v1\Api does not exist' in /home/advanced/vendor/yiisoft/yii2/di/Container.php:422
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/di/Container.php(422): ReflectionClass->__construct('api\modules\v1\...')
+#1 /home/advanced/vendor/yiisoft/yii2/di/Container.php(362): yii\di\Container->getDependencies('api\modules\v1\...')
+#2 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('api\modules\v1\...', Array, Array)
+#3 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('api\modules\v1\...', Array, Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(353): yii\BaseYii::createObject(Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/base/Module.php(510): yii\base\Module->getModule('v1')
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#7 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#10 {main}
+2016-09-08 15:01:29 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '3f373d70-f687-7b20-014f-86d7f4ec52b7'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46015'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327089.01
+    'REQUEST_TIME' => 1473327089
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:01:48 [127.0.0.1][-][-][error][ReflectionException] exception 'ReflectionException' with message 'Class api\modules\v1\Api does not exist' in /home/advanced/vendor/yiisoft/yii2/di/Container.php:422
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/di/Container.php(422): ReflectionClass->__construct('api\modules\v1\...')
+#1 /home/advanced/vendor/yiisoft/yii2/di/Container.php(362): yii\di\Container->getDependencies('api\modules\v1\...')
+#2 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('api\modules\v1\...', Array, Array)
+#3 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('api\modules\v1\...', Array, Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(353): yii\BaseYii::createObject(Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/base/Module.php(510): yii\base\Module->getModule('v1')
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#7 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#10 {main}
+2016-09-08 15:01:48 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '876b690e-9110-afec-6892-7849c90d136a'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46016'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327108.61
+    'REQUEST_TIME' => 1473327108
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:02:27 [127.0.0.1][-][-][error][ReflectionException] exception 'ReflectionException' with message 'Class api\modules\v1\Api does not exist' in /home/advanced/vendor/yiisoft/yii2/di/Container.php:422
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/di/Container.php(422): ReflectionClass->__construct('api\modules\v1\...')
+#1 /home/advanced/vendor/yiisoft/yii2/di/Container.php(362): yii\di\Container->getDependencies('api\modules\v1\...')
+#2 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('api\modules\v1\...', Array, Array)
+#3 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('api\modules\v1\...', Array, Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(353): yii\BaseYii::createObject(Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/base/Module.php(510): yii\base\Module->getModule('v1')
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#7 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#10 {main}
+2016-09-08 15:02:27 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'e8d1e17a-edf4-c9c0-277c-6a2d5b8181c7'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46017'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327147.06
+    'REQUEST_TIME' => 1473327147
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:03:02 [127.0.0.1][-][-][error][ReflectionException] exception 'ReflectionException' with message 'Class api\modules\v1\Api does not exist' in /home/advanced/vendor/yiisoft/yii2/di/Container.php:422
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/di/Container.php(422): ReflectionClass->__construct('api\modules\v1\...')
+#1 /home/advanced/vendor/yiisoft/yii2/di/Container.php(362): yii\di\Container->getDependencies('api\modules\v1\...')
+#2 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('api\modules\v1\...', Array, Array)
+#3 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('api\modules\v1\...', Array, Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(353): yii\BaseYii::createObject(Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/base/Module.php(510): yii\base\Module->getModule('v1')
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#7 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#10 {main}
+2016-09-08 15:03:02 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '6929f702-917b-dd3c-9fb5-29fd194666bd'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46023'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327182.34
+    'REQUEST_TIME' => 1473327182
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:04:07 [127.0.0.1][-][-][error][ReflectionException] exception 'ReflectionException' with message 'Class api\modules\v1\Api does not exist' in /home/advanced/vendor/yiisoft/yii2/di/Container.php:422
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/di/Container.php(422): ReflectionClass->__construct('api\modules\v1\...')
+#1 /home/advanced/vendor/yiisoft/yii2/di/Container.php(362): yii\di\Container->getDependencies('api\modules\v1\...')
+#2 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('api\modules\v1\...', Array, Array)
+#3 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('api\modules\v1\...', Array, Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(353): yii\BaseYii::createObject(Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/base/Module.php(510): yii\base\Module->getModule('v1')
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#7 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#10 {main}
+2016-09-08 15:04:07 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '969c19d0-e73e-8f4d-26bf-17b9e161cf2b'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46025'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327247.87
+    'REQUEST_TIME' => 1473327247
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:06:08 [127.0.0.1][-][-][error][ReflectionException] exception 'ReflectionException' with message 'Class @app\modules\v1\Api does not exist' in /home/advanced/vendor/yiisoft/yii2/di/Container.php:422
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/di/Container.php(422): ReflectionClass->__construct('@app\modules\v1...')
+#1 /home/advanced/vendor/yiisoft/yii2/di/Container.php(362): yii\di\Container->getDependencies('@app\modules\v1...')
+#2 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('@app\modules\v1...', Array, Array)
+#3 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('@app\modules\v1...', Array, Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(353): yii\BaseYii::createObject(Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/base/Module.php(510): yii\base\Module->getModule('v1')
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#7 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#10 {main}
+2016-09-08 15:06:08 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'd9c61568-db80-d691-9d14-987fc55cc2df'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46056'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327368.31
+    'REQUEST_TIME' => 1473327368
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:06:17 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\modules\v1\Api' in file: /home/advanced/api/modules/v1/Api.php. Namespace missing?' in /home/advanced/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\modules\v1\...')
+#1 [internal function]: spl_autoload_call('app\modules\v1\...')
+#2 /home/advanced/vendor/yiisoft/yii2/di/Container.php(422): ReflectionClass->__construct('app\modules\v1\...')
+#3 /home/advanced/vendor/yiisoft/yii2/di/Container.php(362): yii\di\Container->getDependencies('app\modules\v1\...')
+#4 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('app\modules\v1\...', Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('app\modules\v1\...', Array, Array)
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(353): yii\BaseYii::createObject(Array, Array)
+#7 /home/advanced/vendor/yiisoft/yii2/base/Module.php(510): yii\base\Module->getModule('v1')
+#8 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#9 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#10 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#12 {main}
+2016-09-08 15:06:17 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'c576ed7a-9c10-9b6d-a550-4cddbba7ad93'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46058'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327377.35
+    'REQUEST_TIME' => 1473327377
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:06:38 [127.0.0.1][-][-][error][ReflectionException] exception 'ReflectionException' with message 'Class api\modules\v1\Api does not exist' in /home/advanced/vendor/yiisoft/yii2/di/Container.php:422
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/di/Container.php(422): ReflectionClass->__construct('api\modules\v1\...')
+#1 /home/advanced/vendor/yiisoft/yii2/di/Container.php(362): yii\di\Container->getDependencies('api\modules\v1\...')
+#2 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('api\modules\v1\...', Array, Array)
+#3 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('api\modules\v1\...', Array, Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(353): yii\BaseYii::createObject(Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/base/Module.php(510): yii\base\Module->getModule('v1')
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#7 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#10 {main}
+2016-09-08 15:06:38 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '7a333bfb-88f6-71c6-6324-751c4cb1a4bb'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46062'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327398.83
+    'REQUEST_TIME' => 1473327398
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:06:49 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\modules\v1\Api' in file: /home/advanced/api/modules/v1/Api.php. Namespace missing?' in /home/advanced/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\modules\v1\...')
+#1 [internal function]: spl_autoload_call('app\modules\v1\...')
+#2 /home/advanced/vendor/yiisoft/yii2/di/Container.php(422): ReflectionClass->__construct('app\modules\v1\...')
+#3 /home/advanced/vendor/yiisoft/yii2/di/Container.php(362): yii\di\Container->getDependencies('app\modules\v1\...')
+#4 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('app\modules\v1\...', Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('app\modules\v1\...', Array, Array)
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(353): yii\BaseYii::createObject(Array, Array)
+#7 /home/advanced/vendor/yiisoft/yii2/base/Module.php(510): yii\base\Module->getModule('v1')
+#8 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#9 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#10 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#12 {main}
+2016-09-08 15:06:49 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'bc3f507d-0027-e24b-dbe4-f0e8c4605b71'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46063'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327409.1
+    'REQUEST_TIME' => 1473327409
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:07:00 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\modules\v1\Api' in file: /home/advanced/api/modules/v1/Api.php. Namespace missing?' in /home/advanced/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\modules\v1\...')
+#1 [internal function]: spl_autoload_call('app\modules\v1\...')
+#2 /home/advanced/vendor/yiisoft/yii2/di/Container.php(422): ReflectionClass->__construct('app\modules\v1\...')
+#3 /home/advanced/vendor/yiisoft/yii2/di/Container.php(362): yii\di\Container->getDependencies('app\modules\v1\...')
+#4 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('app\modules\v1\...', Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('app\modules\v1\...', Array, Array)
+#6 /home/advanced/vendor/yiisoft/yii2/base/Module.php(353): yii\BaseYii::createObject(Array, Array)
+#7 /home/advanced/vendor/yiisoft/yii2/base/Module.php(510): yii\base\Module->getModule('v1')
+#8 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#9 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#10 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#12 {main}
+2016-09-08 15:07:00 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'b7ca9649-35fb-b679-62dd-a09c873a88dc'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46064'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327420.03
+    'REQUEST_TIME' => 1473327420
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:07:29 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\modules\v1\controllers\CountryController' in file: /home/advanced/api/modules/v1/controllers/CountryController.php. Namespace missing?' in /home/advanced/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\modules\v1\...')
+#1 [internal function]: spl_autoload_call('app\modules\v1\...')
+#2 /home/advanced/vendor/yiisoft/yii2/base/Module.php(562): class_exists('app\modules\v1\...')
+#3 /home/advanced/vendor/yiisoft/yii2/base/Module.php(520): yii\base\Module->createControllerByID('country')
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(512): yii\base\Module->createController('country/index')
+#5 /home/advanced/vendor/yiisoft/yii2/base/Module.php(448): yii\base\Module->createController('v1/country/inde...')
+#6 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#7 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#9 {main}
+2016-09-08 15:07:29 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'e66b5059-2ced-e576-b231-494f44ce4bd9'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46065'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327449.46
+    'REQUEST_TIME' => 1473327449
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:08:03 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'api\modules\v1\models\Country' not found' in /home/advanced/vendor/yiisoft/yii2/rest/IndexAction.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-08 15:08:03 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '70e42e94-626d-e500-6e0a-f3f685c4975e'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46066'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327483.47
+    'REQUEST_TIME' => 1473327483
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:08:22 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'api\modules\v1\models\Country' not found' in /home/advanced/vendor/yiisoft/yii2/rest/IndexAction.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-08 15:08:22 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '1b516c72-fdb2-08f4-1f7b-16b4149fc145'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46067'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327502.51
+    'REQUEST_TIME' => 1473327502
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:09:15 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'api\modules\v1\models\Country' not found' in /home/advanced/vendor/yiisoft/yii2/rest/IndexAction.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-08 15:09:15 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '6e125c09-4a3f-4b31-15d6-255e8926073b'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46069'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327555.02
+    'REQUEST_TIME' => 1473327555
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:09:43 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'api\modules\v1\models\Country' not found' in /home/advanced/vendor/yiisoft/yii2/rest/IndexAction.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-08 15:09:43 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'c4903911-13a9-ac5c-623c-f20de9e2ee8f'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46070'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327583.36
+    'REQUEST_TIME' => 1473327583
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:09:45 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'api\modules\v1\models\Country' not found' in /home/advanced/vendor/yiisoft/yii2/rest/IndexAction.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-08 15:09:45 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'f160be04-b0fb-9c33-2f48-05d8d4d57970'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46071'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327585.09
+    'REQUEST_TIME' => 1473327585
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:09:45 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'api\modules\v1\models\Country' not found' in /home/advanced/vendor/yiisoft/yii2/rest/IndexAction.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-08 15:09:45 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '0a0ba146-0b47-7dac-26c8-82212f075fb8'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46072'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327585.92
+    'REQUEST_TIME' => 1473327585
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:09:46 [127.0.0.1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'api\modules\v1\models\Country' not found' in /home/advanced/vendor/yiisoft/yii2/rest/IndexAction.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-09-08 15:09:46 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '4c2f4b6a-ce92-f7d9-f218-b46e2c4b2728'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46073'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327586.8
+    'REQUEST_TIME' => 1473327586
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:10:18 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Unknown component ID: db' in /home/advanced/vendor/yiisoft/yii2/di/ServiceLocator.php:136
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/base/Application.php(491): yii\di\ServiceLocator->get('db')
+#1 /home/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(133): yii\base\Application->getDb()
+#2 /home/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(315): yii\db\ActiveRecord::getDb()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Query.php(386): yii\db\ActiveQuery->createCommand(NULL)
+#4 /home/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(334): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#5 /home/advanced/vendor/yiisoft/yii2/db/Query.php(300): yii\db\ActiveQuery->queryScalar('COUNT(*)', NULL)
+#6 /home/advanced/vendor/yiisoft/yii2/data/ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#7 /home/advanced/vendor/yiisoft/yii2/data/BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#8 /home/advanced/vendor/yiisoft/yii2/data/ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#9 /home/advanced/vendor/yiisoft/yii2/data/BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#10 /home/advanced/vendor/yiisoft/yii2/data/BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#11 /home/advanced/vendor/yiisoft/yii2/rest/Serializer.php(174): yii\data\BaseDataProvider->getModels()
+#12 /home/advanced/vendor/yiisoft/yii2/rest/Serializer.php(143): yii\rest\Serializer->serializeDataProvider(Object(yii\data\ActiveDataProvider))
+#13 /home/advanced/vendor/yiisoft/yii2/rest/Controller.php(97): yii\rest\Serializer->serialize(Object(yii\data\ActiveDataProvider))
+#14 /home/advanced/vendor/yiisoft/yii2/rest/Controller.php(75): yii\rest\Controller->serializeData(Object(yii\data\ActiveDataProvider))
+#15 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\rest\Controller->afterAction(Object(yii\rest\IndexAction), Object(yii\data\ActiveDataProvider))
+#16 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#20 {main}
+2016-09-08 15:10:18 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '875875e1-b095-a35e-6b03-f8fca0811525'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46075'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327618.72
+    'REQUEST_TIME' => 1473327618
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:11:45 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Unknown component ID: db' in /home/advanced/vendor/yiisoft/yii2/di/ServiceLocator.php:136
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/base/Application.php(491): yii\di\ServiceLocator->get('db')
+#1 /home/advanced/vendor/yiisoft/yii2/db/ActiveRecord.php(133): yii\base\Application->getDb()
+#2 /home/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(315): yii\db\ActiveRecord::getDb()
+#3 /home/advanced/vendor/yiisoft/yii2/db/Query.php(386): yii\db\ActiveQuery->createCommand(NULL)
+#4 /home/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(334): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#5 /home/advanced/vendor/yiisoft/yii2/db/Query.php(300): yii\db\ActiveQuery->queryScalar('COUNT(*)', NULL)
+#6 /home/advanced/vendor/yiisoft/yii2/data/ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#7 /home/advanced/vendor/yiisoft/yii2/data/BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#8 /home/advanced/vendor/yiisoft/yii2/data/ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#9 /home/advanced/vendor/yiisoft/yii2/data/BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#10 /home/advanced/vendor/yiisoft/yii2/data/BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#11 /home/advanced/vendor/yiisoft/yii2/rest/Serializer.php(174): yii\data\BaseDataProvider->getModels()
+#12 /home/advanced/vendor/yiisoft/yii2/rest/Serializer.php(143): yii\rest\Serializer->serializeDataProvider(Object(yii\data\ActiveDataProvider))
+#13 /home/advanced/vendor/yiisoft/yii2/rest/Controller.php(97): yii\rest\Serializer->serialize(Object(yii\data\ActiveDataProvider))
+#14 /home/advanced/vendor/yiisoft/yii2/rest/Controller.php(75): yii\rest\Controller->serializeData(Object(yii\data\ActiveDataProvider))
+#15 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(156): yii\rest\Controller->afterAction(Object(yii\rest\IndexAction), Object(yii\data\ActiveDataProvider))
+#16 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index', Array)
+#17 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/inde...', Array)
+#18 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#20 {main}
+2016-09-08 15:11:45 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'f211505c-e77d-8054-3b88-a9254805ed4b'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46080'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327705.73
+    'REQUEST_TIME' => 1473327705
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:12:45 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Object not found: ID' in /home/advanced/vendor/yiisoft/yii2/rest/Action.php:101
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/rest/ViewAction.php(27): yii\rest\Action->findModel('ID')
+#1 [internal function]: yii\rest\ViewAction->run('ID')
+#2 /home/advanced/vendor/yiisoft/yii2/base/Action.php(92): call_user_func_array(Array, Array)
+#3 /home/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\Action->runWithParams(Array)
+#4 /home/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('view', Array)
+#5 /home/advanced/vendor/yiisoft/yii2/web/Application.php(87): yii\base\Module->runAction('v1/country/view', Array)
+#6 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#8 {main}
+2016-09-08 15:12:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => 'ID'
+]
+
+$_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries/ID'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries/ID'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries/ID'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries/ID'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '670207c0-459b-7f75-5d2e-3ea0b9844ec0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46090'
+    'REDIRECT_URL' => '/v1/countries/ID'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries/ID'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327764.94
+    'REQUEST_TIME' => 1473327764
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:12:47 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/advanced/vendor/yiisoft/yii2/web/Request.php:189
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/web/Application.php(78): yii\web\Request->resolve()
+#1 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#3 {main}
+2016-09-08 15:12:47 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries/'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries/'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries/'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries/'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => 'b1078800-98ac-2c49-6d58-1eb479b42c01'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46090'
+    'REDIRECT_URL' => '/v1/countries/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327767.65
+    'REQUEST_TIME' => 1473327767
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:13:19 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /home/advanced/vendor/yiisoft/yii2/web/Request.php:189
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/web/Application.php(78): yii\web\Request->resolve()
+#1 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#3 {main}
+2016-09-08 15:13:19 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries/'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries/'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries/'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries/'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '5bf1494a-32d7-252f-8dac-8fd3d2d7a67b'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46096'
+    'REDIRECT_URL' => '/v1/countries/'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327799.51
+    'REQUEST_TIME' => 1473327799
+    'argv' => []
+    'argc' => 0
+]
+2016-09-08 15:15:14 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\web\UrlRule::0' in /home/advanced/vendor/yiisoft/yii2/base/Object.php:161
+Stack trace:
+#0 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(521): yii\base\Object->__set('0', Array)
+#1 /home/advanced/vendor/yiisoft/yii2/base/Object.php(105): yii\BaseYii::configure(Object(yii\web\UrlRule), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 /home/advanced/vendor/yiisoft/yii2/di/Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#4 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('yii\web\UrlRule', Array, Array)
+#5 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\web\UrlRule', Array, Array)
+#6 /home/advanced/vendor/yiisoft/yii2/web/UrlManager.php(218): yii\BaseYii::createObject(Array)
+#7 /home/advanced/vendor/yiisoft/yii2/web/UrlManager.php(164): yii\web\UrlManager->buildRules(Array)
+#8 /home/advanced/vendor/yiisoft/yii2/base/Object.php(107): yii\web\UrlManager->init()
+#9 [internal function]: yii\base\Object->__construct(Array)
+#10 /home/advanced/vendor/yiisoft/yii2/di/Container.php(379): ReflectionClass->newInstanceArgs(Array)
+#11 /home/advanced/vendor/yiisoft/yii2/di/Container.php(154): yii\di\Container->build('yii\web\UrlMana...', Array, Array)
+#12 /home/advanced/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\web\UrlMana...', Array, Array)
+#13 /home/advanced/vendor/yiisoft/yii2/di/ServiceLocator.php(133): yii\BaseYii::createObject(Array)
+#14 /home/advanced/vendor/yiisoft/yii2/base/Application.php(563): yii\di\ServiceLocator->get('urlManager')
+#15 /home/advanced/vendor/yiisoft/yii2/web/Request.php(179): yii\base\Application->getUrlManager()
+#16 /home/advanced/vendor/yiisoft/yii2/web/Application.php(78): yii\web\Request->resolve()
+#17 /home/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/advanced/api/web/index.php(13): yii\base\Application->run()
+#19 {main}
+2016-09-08 15:15:14 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_SCRIPT_URL' => '/v1/countries'
+    'REDIRECT_SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'REDIRECT_STATUS' => '200'
+    'SCRIPT_URL' => '/v1/countries'
+    'SCRIPT_URI' => 'http://api.sciensys.dev/v1/countries'
+    'HTTP_HOST' => 'api.sciensys.dev'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.92 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '249c75f6-30a8-be84-42e7-68532d62539a'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-GB,en-US;q=0.8,en;q=0.6'
+    'PATH' => '/sbin:/bin:/usr/sbin:/usr/bin'
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Unix) PHP/5.5.10 OpenSSL/1.0.1k-fips'
+    'SERVER_NAME' => 'api.sciensys.dev'
+    'SERVER_ADDR' => '127.0.53.53'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/advanced/api/web/'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/home/advanced/api/web/index.php'
+    'REMOTE_PORT' => '46101'
+    'REDIRECT_URL' => '/v1/countries'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/v1/countries'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1473327914.47
+    'REQUEST_TIME' => 1473327914
+    'argv' => []
+    'argc' => 0
+]

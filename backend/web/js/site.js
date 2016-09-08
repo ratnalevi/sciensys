@@ -185,7 +185,7 @@ $(document).ready(function(){
     $('.notifications-menu').on('click', function(){
 
         if( latestNotificationTime > 0 ) {
-           // setTimeout("updateNotifications()", notificationClearInterval );
+            setTimeout("updateNotifications()", notificationClearInterval );
         }
     });
 });

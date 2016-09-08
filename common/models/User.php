@@ -36,7 +36,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function tableName()
     {
-        return '{{%qs_user}}';
+        return '{{%user}}';
     }
 
     /**
@@ -59,6 +59,7 @@ class User extends ActiveRecord implements IdentityInterface
             ['type', 'default', 'value' => self::NORMAL_USER],
             ['type', 'in', 'range' => [self::NORMAL_USER, self::ROOT_USER]],
             [['activation_key'], 'string'],
+            [['mobile'] , 'integer', 'max' => 10, 'pattern'=> '/^[0-9]+$/u', 'message'=> 'Mobile can contain only numbers'],
             ['status', 'default', 'value' => self::STATUS_ACTIVE],
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
         ];

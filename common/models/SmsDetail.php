@@ -5,11 +5,11 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "qs_sms_detail".
+ * This is the model class for table "sms_detail".
  *
  * @property integer $id
  * @property string $sender_name
- * @property integer $send_to
+ * @property string $send_to
  * @property string $message
  * @property integer $batch_id
  * @property integer $msg_id
@@ -22,7 +22,7 @@ class SmsDetail extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'qs_sms_detail';
+        return 'sms_detail';
     }
 
     /**
@@ -33,8 +33,8 @@ class SmsDetail extends \yii\db\ActiveRecord
         return [
             [['sender_name', 'send_to', 'message', 'msg_status'], 'required'],
             [['batch_id', 'msg_id'], 'integer'],
-            [['send_to'], 'string', 'max' => 15],
             [['sender_name'], 'string', 'max' => 64],
+            [['send_to'], 'string', 'max' => 15],
             [['message'], 'string', 'max' => 255],
             [['msg_status'], 'string', 'max' => 32],
         ];

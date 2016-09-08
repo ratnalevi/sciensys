@@ -84,31 +84,39 @@ $this->params['breadcrumbs'][] = $this->title;
             'groupOptions'=>['class'=>'text-center']
         ],
         [
-            'attribute'=>'address1',
+            'attribute'=>'address',
             'format'=>'raw',
-            'value'=>'<span class="text-justify"><em>' . $model->address1 . '</em></span>',
+            'value'=>'<span class="text-justify"><em>' . $model->address . '</em></span>',
         ],
         [
-            'attribute'=>'address2',
+            'attribute'=>'pincode',
             'format'=>'raw',
-            'value'=>'<span class="text-justify"><em>' . $model->address2 . '</em></span>',
+            'value'=> $model->pincode,
+            'valueColOptions'=>['style'=>'width:30%'],
         ],
         [
-            'attribute'=>'address3',
+            'group'=>true,
+            'label'=>'Company Details',
+            'rowOptions'=>['class'=>'info'],
+            'groupOptions'=>['class'=>'text-center']
+        ],
+        [
+            'attribute'=>'company_name',
             'format'=>'raw',
-            'value'=>'<span class="text-justify"><em>' . $model->address3 . '</em></span>',
+            'value'=>'<span class="text-justify"><em>' . $model->company_name . '</em></span>',
         ],
         [
             'columns' => [
                 [
-                    'attribute'=>'city_id',
-                    'value'=> ucfirst($model->city->name),
+                    'attribute'=>'type_of_business',
+                    'format'=>'raw',
+                    'value'=> $model->typeOfBusiness->name,
                     'valueColOptions'=>['style'=>'width:30%'],
                 ],
                 [
-                    'attribute'=>'pincode',
+                    'attribute'=>'form_of_business',
                     'format'=>'raw',
-                    'value'=> $model->pincode,
+                    'value'=> $model->formOfBusiness->name,
                     'valueColOptions'=>['style'=>'width:30%'],
                 ],
             ],

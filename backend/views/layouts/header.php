@@ -24,6 +24,7 @@ use yii\helpers\Html;
                         <span class="label label-warning notification-count"></span>
                     </a>
                     <ul class="dropdown-menu">
+                        <i class="fa fa-refresh fa-spin notifications-loading hidden"></i>
                         <li class="header notification-header">You have no new notifications</li>
                         <li>
                             <!-- inner menu: contains the actual data -->
@@ -31,7 +32,7 @@ use yii\helpers\Html;
                             </ul>
                         </li>
 
-                        <li class="footer notification-footer"><a href="#">View all</a></li>
+                        <li class="footer notification-footer hidden" style="display: none"><a href="#">View all</a></li>
                     </ul>
                 </li>
 

@@ -21,7 +21,6 @@
                     ['label' => 'Menu ', 'options' => ['class' => 'header']],
                     ['label' => 'Home', 'icon' => 'fa fa-home', 'url' => ['/site/index' ]],
                     ['label' => 'Personal Profile', 'icon' => 'fa fa-user', 'url' => ['/user-detail/view-me' ]],
-                    ['label' => 'Business Profile', 'icon' => 'fa fa-building-o', 'url' => ['/business-detail/view-me' ]],
                     ['label' => 'Documents', 'icon' => 'fa fa-cloud-upload', 'url' => ['/document-detail/index']]
                 ],
             ]

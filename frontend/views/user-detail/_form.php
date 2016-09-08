@@ -63,7 +63,7 @@ use kartik\builder\FormGrid;
                     'attributes'=>[
                         'country_code'=>[
                             'type'=>Form::INPUT_DROPDOWN_LIST,
-                            'items'=> \yii\helpers\ArrayHelper::map( \common\models\Country::find()->all(), 'iso_code', 'iso_code'),
+                            'items'=> ['91' => '+91'],
                         ],
                         'mobile'=>[
                             'type'=>Form::INPUT_TEXT, 'options'=>['placeholder'=>'Mobile Number...']
@@ -73,37 +73,27 @@ use kartik\builder\FormGrid;
                 [
                     'contentBefore'=>'<legend class="text-info"><small>Address Info</small></legend>',
                     'attributes'=>[       // 1 column layout
-                        'address1'=>['type'=>Form::INPUT_TEXT, 'options'=>['placeholder'=>'Enter address1...']],
+                        'address'=>['type'=>Form::INPUT_TEXTAREA, 'options'=>['placeholder'=>'Enter address...']],
                     ],
                 ],
                 [
-                    'attributes'=>[       // 1 column layout
-                        'address2'=>['type'=>Form::INPUT_TEXT, 'options'=>['placeholder'=>'Enter address2...']],
-                    ],
+                    'contentBefore'=>'<legend class="text-info"><small>Business Details</small></legend>',
+                    'attributes'=>[
+                        'company_name'=>[
+                            'type'=>Form::INPUT_TEXT, 'options'=>['placeholder'=>'First Name'],
+                        ],
+                    ]
                 ],
                 [
-                    'attributes'=>[       // 1 column layout
-                        'address3'=>['type'=>Form::INPUT_TEXT, 'options'=>['placeholder'=>'Enter address3...']],
-                    ],
-                ],
-                [
-                    'columns'=>3,
-                    'autoGenerateColumns'=>false, // override columns setting
-                    'attributes'=>[       // colspan example with nested attributes
-                        'address_detail' => [
-                            'columns'=>6,
-                            'attributes'=>[
-                                'city_id'=>[
-                                    'type'=>Form::INPUT_DROPDOWN_LIST,
-                                    'items'=> \yii\helpers\ArrayHelper::map( \common\models\City::find()->all(), 'id', 'name'),
-                                ],
-                                'pincode'=>[
-                                    'type'=>Form::INPUT_TEXT,
-                                    'options'=>['placeholder'=>'Zip...'],
-                                    'columnOptions'=>['colspan'=>2],
-                                ],
-                            ]
-                        ]
+                    'attributes'=>[
+                        'form_of_business'=>[
+                            'type'=>Form::INPUT_DROPDOWN_LIST,
+                            'items'=> \yii\helpers\ArrayHelper::map( \common\models\FormOfBusiness::find()->all(), 'id', 'name'),
+                        ],
+                        'type_of_business'=>[
+                            'type'=>Form::INPUT_DROPDOWN_LIST,
+                            'items'=> \yii\helpers\ArrayHelper::map( \common\models\TypeOfBusiness::find()->all(), 'id', 'name'),
+                        ],
                     ],
                 ],
                 [

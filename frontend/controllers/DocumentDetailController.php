@@ -3,8 +3,8 @@
 namespace frontend\controllers;
 
 use common\helpers\FileHelper;
-use common\models\BusinessDetail;
 use common\models\DocumentType;
+use frontend\models\DocumentDetailForm;
 use kartik\mpdf\Pdf;
 use common\models\User;
 use Yii;
@@ -46,78 +46,54 @@ class DocumentDetailController extends Controller
     public function actionIndex()
     {
         $searchModel = new DocumentDetailSearch();
+        $model = new DocumentDetailForm();
 
-        if( Yii::$app->request->isPost ){
-            $params = Yii::$app->request->post('DocumentDetail');
-            $model = DocumentDetail::find()
-                ->andWhere(['doc_type_id' => $params['doc_type_id']])
-                ->andWhere(['user_id' => Yii::$app->user->id ])
-                ->one();
+        if( $model->load( Yii::$app->request->post()) ){
 
-            if( $model === null ){
-                $model = new DocumentDetail();
-                $model->created_at = time();
-            }
+            if (( $doc = $model->submit() ) instanceof DocumentDetail && !$doc->hasErrors()) {
 
-            if( isset( $params['file'] ) ){
-                $model->doc_type_id = $params['doc_type_id'];
-                if (( $model->submit()) !== null && !$model->hasErrors()) {
+                $userDetail = UserDetail::find()->andWhere(['user_id' => $doc->user_id])->one();
 
-                    $userDetail = UserDetail::find()->andWhere(['user_id' => $model->user_id])->one();
+                $message = '<b>' . $doc->docType->name . '</b> report has been uploaded by ' . $userDetail->fullName . " Review required";
 
-                    $message = '<b>' . $model->docType->name . '</b> report has been uploaded by ' . $userDetail->getFullName() . " Review required";
+                $admin = User::find()->andWhere(['type' => User::ROOT_USER ])->one();
 
-                    $admin = User::find()->andWhere(['type' => User::ROOT_USER ])->one();
+                $notification = new Notification();
+                $notification->from_user = Yii::$app->user->id;
+                $notification->to_user = $admin->id;
+                $notification->message = $message;
+                $notification->document_id = $doc->id;
+                $notification->is_read = Notification::UNREAD;
+                $notification->created_at = time();
+                $notification->read_at = 0;
 
-                    $notification = new Notification();
-                    $notification->from_user = Yii::$app->user->id;
-                    $notification->to_user = $admin->id;
-                    $notification->message = $message;
-                    $notification->document_id = $model->id;
-                    $notification->is_read = Notification::UNREAD;
-                    $notification->created_at = time();
-                    $notification->read_at = 0;
+                // send a message to user who uploaded the document
 
-                    // send a message to user who uploaded the document
+                $docs = DocumentType::find()->indexBy('id')->all();
 
-                    $docs = DocumentType::find()->indexBy('id')->all();
-
-                    if( $userDetail !== null && $userDetail->mobile !== '' ) {
-                        $message = 'Dear ' . $userDetail->getFullName() . ", " . $docs[$params['doc_type_id']]->name . ' document has been uploaded successfully. We will update on approval';
-                        FileHelper::sendSMS($userDetail->mobile, $message );
-                    }
-
-                    if( !$notification->save() ){
-                        Yii::$app->session->setFlash('kv-detail-error', 'Updated successfully, but notification failed');
-                    }
-
-                    Yii::$app->getSession()->setFlash('success', 'Saved successfully');
+                if( $userDetail !== null && $userDetail->mobile !== '' ) {
+                    $message = 'Dear ' . $userDetail->fullName . ", " . $docs[$doc->doc_type_id]->name . ' document has been uploaded successfully. We will update on approval';
+                    FileHelper::sendSMS($userDetail->mobile, $message );
                 }
-            }else {
 
-                $model = DocumentDetail::find()->andWhere(['id' => $params['id']])->one();
-                $model->status = $params['status'] == 1 ? 10 : 0;
-
-                if (!$model->save()) {
-                    Yii::$app->session->setFlash('kv-detail-error', 'Updation Failed');
+                if( !$notification->save() ){
+                    Yii::$app->session->setFlash('kv-detail-error', 'Updated successfully, but notification failed');
                 }
+
+                Yii::$app->getSession()->setFlash('success', 'Saved successfully');
             }
-        }else{
-            $model = new DocumentDetail();
         }
 
         $id = Yii::$app->user->id;
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        $business = BusinessDetail::find()->andWhere(['user_id' => $id])->one();
         $personal = UserDetail::find()->andWhere(['user_id' => $id ] )->one();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
             'model' => $model,
-            'business' => $business,
             'personal' => $personal
         ]);
     }
@@ -125,7 +101,6 @@ class DocumentDetailController extends Controller
     public function actionGetReport(){
 
         $id = Yii::$app->user->id;
-        $business = BusinessDetail::find()->andWhere(['user_id' => $id])->one();
         $personal = UserDetail::find()->andWhere(['user_id' => $id ] )->one();
 
         $path = Yii::$app->basePath;
@@ -133,7 +108,6 @@ class DocumentDetailController extends Controller
             'mode' => Pdf::MODE_CORE, // leaner size using standard fonts
             'content' => $this->renderPartial('_final_document', [
                 'personal' => $personal,
-                'business' => $business
             ]),
             'cssFile' => $path.  '/web/css/other.css',
             'destination' => Pdf::DEST_BROWSER,
